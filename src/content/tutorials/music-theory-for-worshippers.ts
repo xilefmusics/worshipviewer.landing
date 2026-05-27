@@ -340,6 +340,9 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     text: "Listen to how those overtones show up as different \"colors\" in practice:",
   },
   {
+    type: "harmonic-simulator",
+  },
+  {
     type: "audio",
     label: "Sine wave (pure tone)",
     src: asset("sine.wav"),
@@ -467,6 +470,9 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     width: "full",
   },
   {
+    type: "interval-simulator",
+  },
+  {
     type: "heading",
     id: "equidistant-semitones",
     text: "The second simplification: Equidistant Semitones",
@@ -511,6 +517,9 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     src: asset("circle-of-fifths-simple.svg"),
     alt: "Circle of fifths diagram",
     width: "half",
+  },
+  {
+    type: "circle-of-fifths-simulator",
   },
   {
     type: "heading",

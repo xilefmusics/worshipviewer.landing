@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import { CircleOfFifthsSimulator } from "@/components/circle-of-fifths-simulator";
+import { HarmonicSimulator } from "@/components/harmonic-simulator";
+import { IntervalSimulator } from "@/components/interval-simulator";
 import { ScaleSimulator } from "@/components/scale-simulator";
 import { ToneSimulator } from "@/components/tone-simulator";
 import type { TutorialEntry } from "@/lib/tutorial-content";
@@ -81,6 +84,22 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
 
         if (entry.type === "tone-simulator") {
           return <ToneSimulator key={`tone-simulator-${index}`} />;
+        }
+
+        if (entry.type === "harmonic-simulator") {
+          return <HarmonicSimulator key={`harmonic-simulator-${index}`} />;
+        }
+
+        if (entry.type === "interval-simulator") {
+          return <IntervalSimulator key={`interval-simulator-${index}`} />;
+        }
+
+        if (entry.type === "circle-of-fifths-simulator") {
+          return (
+            <CircleOfFifthsSimulator
+              key={`circle-of-fifths-simulator-${index}`}
+            />
+          );
         }
 
         return (

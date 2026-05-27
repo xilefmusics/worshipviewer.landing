@@ -32,6 +32,41 @@
       "frequency": "Frequency",
       "amplitude": "Amplitude"
     },
+    "harmonicSimulator": {
+      "play": "Play tone",
+      "stop": "Stop",
+      "preset": "Preset",
+      "harmonicLevels": "Harmonic levels",
+      "harmonicVolume": "Harmonic {{harmonic}} volume",
+      "presets": {
+        "pure": "Pure tone",
+        "string": "String",
+        "brass": "Brass",
+        "clarinet": "Clarinet",
+        "flute": "Flute",
+        "organ": "Organ",
+        "custom": "Custom"
+      }
+    },
+    "intervalSimulator": {
+      "play": "Play interval",
+      "stop": "Stop",
+      "ratioLabel": "{{base}} Hz + {{interval}} Hz ({{ratio}})",
+      "presets": {
+        "octave": "Octave",
+        "fifth": "Perfect fifth",
+        "minorSecond": "Minor second"
+      }
+    },
+    "circleOfFifthsSimulator": {
+      "play": "Play note",
+      "stop": "Stop",
+      "walkFifths": "Walk the fifths",
+      "stopWalk": "Stop",
+      "centerLabel": "5ths",
+      "ariaLabel": "Interactive circle of fifths",
+      "selectNote": "Select {{note}}"
+    },
     "scaleSimulator": {
       "play": "Play scale",
       "stop": "Stop",

@@ -32,6 +32,41 @@
       "frequency": "Frequenz",
       "amplitude": "Amplitude"
     },
+    "harmonicSimulator": {
+      "play": "Ton abspielen",
+      "stop": "Stoppen",
+      "preset": "Vorlage",
+      "harmonicLevels": "Obertonspegel",
+      "harmonicVolume": "Oberton {{harmonic}} Lautstärke",
+      "presets": {
+        "pure": "Reiner Ton",
+        "string": "Saite",
+        "brass": "Blechbläser",
+        "clarinet": "Klarinette",
+        "flute": "Flöte",
+        "organ": "Orgel",
+        "custom": "Eigene Auswahl"
+      }
+    },
+    "intervalSimulator": {
+      "play": "Intervall abspielen",
+      "stop": "Stoppen",
+      "ratioLabel": "{{base}} Hz + {{interval}} Hz ({{ratio}})",
+      "presets": {
+        "octave": "Oktave",
+        "fifth": "Reine Quinte",
+        "minorSecond": "Kleine Sekunde"
+      }
+    },
+    "circleOfFifthsSimulator": {
+      "play": "Note abspielen",
+      "stop": "Stoppen",
+      "walkFifths": "Quinten durchgehen",
+      "stopWalk": "Stoppen",
+      "centerLabel": "Quinten",
+      "ariaLabel": "Interaktiver Quintenzirkel",
+      "selectNote": "{{note}} auswählen"
+    },
     "scaleSimulator": {
       "play": "Tonleiter abspielen",
       "stop": "Stoppen",

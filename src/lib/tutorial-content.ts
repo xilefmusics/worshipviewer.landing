@@ -33,13 +33,28 @@ export type TutorialToneSimulator = {
   type: "tone-simulator";
 };
 
+export type TutorialHarmonicSimulator = {
+  type: "harmonic-simulator";
+};
+
+export type TutorialIntervalSimulator = {
+  type: "interval-simulator";
+};
+
+export type TutorialCircleOfFifthsSimulator = {
+  type: "circle-of-fifths-simulator";
+};
+
 export type TutorialEntry =
   | TutorialHeading
   | TutorialParagraph
   | TutorialImage
   | TutorialAudio
   | TutorialScaleSimulator
-  | TutorialToneSimulator;
+  | TutorialToneSimulator
+  | TutorialHarmonicSimulator
+  | TutorialIntervalSimulator
+  | TutorialCircleOfFifthsSimulator;
 
 export type TutorialTocItem = {
   id: string;
