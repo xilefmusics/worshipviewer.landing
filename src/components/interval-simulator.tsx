@@ -300,9 +300,7 @@ export function IntervalSimulator() {
         aria-label={t("tutorials.intervalSimulator.intervalGrid")}
       >
         <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_minmax(0,1fr)] gap-1.5 px-0.5">
-          <span className="sr-only">
-            {t("tutorials.intervalSimulator.intervalColumn")}
-          </span>
+          <span aria-hidden="true" />
           <span className="text-center text-[10px] font-medium uppercase tracking-wide text-[var(--color-muted-foreground)] sm:text-xs">
             {t("tutorials.intervalSimulator.tunings.tempered")}
           </span>

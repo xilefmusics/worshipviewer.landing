@@ -1,8 +1,5 @@
 import type { TutorialEntry } from "@/lib/tutorial-content";
 
-const asset = (file: string) =>
-  `/tutorials/music-theory-for-worshippers/${file}`;
-
 export const musicTheoryForWorshippers: TutorialEntry[] = [
   {
     type: "heading",
@@ -341,21 +338,6 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   },
   {
     type: "harmonic-simulator",
-  },
-  {
-    type: "audio",
-    label: "Sine wave (pure tone)",
-    src: asset("sine.wav"),
-  },
-  {
-    type: "audio",
-    label: "Piano tone",
-    src: asset("piano.wav"),
-  },
-  {
-    type: "audio",
-    label: "Guitar tone",
-    src: asset("guitar.wav"),
   },
   {
     type: "paragraph",

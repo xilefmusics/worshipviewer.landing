@@ -27,6 +27,28 @@ import {
   buildHarmonicWavePath,
 } from "@/lib/wave-math";
 
+const MIN_VOLUME = 0.001;
+
+function volumeToSlider(volume: number): number {
+  if (volume <= 0) {
+    return 0;
+  }
+  const minLog = Math.log(MIN_VOLUME);
+  const maxLog = Math.log(1);
+  return (
+    ((Math.log(Math.min(volume, 1)) - minLog) / (maxLog - minLog)) * 100
+  );
+}
+
+function sliderToVolume(slider: number): number {
+  if (slider <= 0) {
+    return 0;
+  }
+  const minLog = Math.log(MIN_VOLUME);
+  const maxLog = Math.log(1);
+  return Math.exp(minLog + (slider / 100) * (maxLog - minLog));
+}
+
 export function HarmonicSimulator() {
   const { t } = useTranslation();
   const presetId = useId();
@@ -206,12 +228,15 @@ export function HarmonicSimulator() {
                 min={0}
                 max={100}
                 step={1}
-                value={Math.round(volume * 100)}
+                value={volumeToSlider(volume)}
                 aria-label={t("tutorials.harmonicSimulator.harmonicVolume", {
                   harmonic,
                 })}
                 onChange={(event) =>
-                  setHarmonicVolume(harmonic, Number(event.target.value) / 100)
+                  setHarmonicVolume(
+                    harmonic,
+                    sliderToVolume(Number(event.target.value)),
+                  )
                 }
                 className={cn(
                   "h-20 w-full max-w-[2.5rem] cursor-pointer appearance-none rounded-full sm:h-24",
