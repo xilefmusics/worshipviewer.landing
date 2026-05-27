@@ -29,12 +29,17 @@ export type TutorialScaleSimulator = {
   type: "scale-simulator";
 };
 
+export type TutorialToneSimulator = {
+  type: "tone-simulator";
+};
+
 export type TutorialEntry =
   | TutorialHeading
   | TutorialParagraph
   | TutorialImage
   | TutorialAudio
-  | TutorialScaleSimulator;
+  | TutorialScaleSimulator
+  | TutorialToneSimulator;
 
 export type TutorialTocItem = {
   id: string;

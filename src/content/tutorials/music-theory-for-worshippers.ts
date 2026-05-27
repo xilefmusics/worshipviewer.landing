@@ -203,6 +203,9 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     level: 3,
   },
   {
+    type: "tone-simulator",
+  },
+  {
     type: "paragraph",
     text: "So what is a tone?",
   },

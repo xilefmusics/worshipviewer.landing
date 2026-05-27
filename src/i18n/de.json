@@ -26,6 +26,12 @@
     "tableOfContents": "Inhalt",
     "expandChapter": "{{chapter}} aufklappen",
     "collapseChapter": "{{chapter}} zuklappen",
+    "toneSimulator": {
+      "play": "Ton abspielen",
+      "stop": "Stoppen",
+      "frequency": "Frequenz",
+      "amplitude": "Amplitude"
+    },
     "scaleSimulator": {
       "play": "Tonleiter abspielen",
       "stop": "Stoppen",

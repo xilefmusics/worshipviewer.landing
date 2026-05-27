@@ -26,6 +26,12 @@
     "tableOfContents": "On this page",
     "expandChapter": "Expand {{chapter}}",
     "collapseChapter": "Collapse {{chapter}}",
+    "toneSimulator": {
+      "play": "Play tone",
+      "stop": "Stop",
+      "frequency": "Frequency",
+      "amplitude": "Amplitude"
+    },
     "scaleSimulator": {
       "play": "Play scale",
       "stop": "Stop",
