@@ -19,7 +19,7 @@ const CIRCLE_NOTES = [
   { label: "A", semitones: 9 },
   { label: "E", semitones: 4 },
   { label: "B", semitones: 11 },
-  { label: "F♯", semitones: 6 },
+  { label: "G♭", semitones: 6 },
   { label: "D♭", semitones: 1 },
   { label: "A♭", semitones: 8 },
   { label: "E♭", semitones: 3 },

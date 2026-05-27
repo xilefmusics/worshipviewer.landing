@@ -51,11 +51,28 @@
     "intervalSimulator": {
       "play": "Play interval",
       "stop": "Stop",
-      "ratioLabel": "{{base}} Hz + {{interval}} Hz ({{ratio}})",
-      "presets": {
-        "octave": "Octave",
+      "intervalGrid": "Intervals by tuning",
+      "intervalColumn": "Interval",
+      "selectInterval": "{{interval}}, {{tuning}}",
+      "ratioLabel": "{{intervalName}} ({{tuning}}): {{base}} Hz + {{interval}} Hz ({{ratio}})",
+      "temperedRatio": "12-TET, {{semitones}} semitones",
+      "tunings": {
+        "tempered": "Well tempered",
+        "pure": "Pure"
+      },
+      "intervals": {
+        "minorSecond": "Minor second",
+        "majorSecond": "Major second",
+        "minorThird": "Minor third",
+        "majorThird": "Major third",
+        "fourth": "Perfect fourth",
+        "tritone": "Tritone",
         "fifth": "Perfect fifth",
-        "minorSecond": "Minor second"
+        "minorSixth": "Minor sixth",
+        "majorSixth": "Major sixth",
+        "minorSeventh": "Minor seventh",
+        "majorSeventh": "Major seventh",
+        "octave": "Octave"
       }
     },
     "circleOfFifthsSimulator": {

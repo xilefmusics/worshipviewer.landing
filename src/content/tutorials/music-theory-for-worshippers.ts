@@ -385,16 +385,6 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   },
   {
     type: "paragraph",
-    text: "You can see it within the following picture.",
-  },
-  {
-    type: "image",
-    src: asset("octave.svg"),
-    alt: "Wave diagram showing an octave interval",
-    width: "full",
-  },
-  {
-    type: "paragraph",
     text: "It's the points where the waves don't align that bring color.",
   },
   {
@@ -435,16 +425,6 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   },
   {
     type: "paragraph",
-    text: "And you can see it within the next picture.",
-  },
-  {
-    type: "image",
-    src: asset("fifth.svg"),
-    alt: "Wave diagram showing a perfect fifth interval",
-    width: "full",
-  },
-  {
-    type: "paragraph",
     text: "This interval we call a fifth.",
   },
   {
@@ -461,13 +441,7 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   },
   {
     type: "paragraph",
-    text: "In the \"pure\" model this corresponds to the frequency ratio 16:15 (a minor second), which is exactly what the picture shows.",
-  },
-  {
-    type: "image",
-    src: asset("second.svg"),
-    alt: "Wave diagram showing a minor second interval",
-    width: "full",
+    text: "In the \"pure\" model this corresponds to the frequency ratio 16:15 (a minor second).",
   },
   {
     type: "interval-simulator",
@@ -511,12 +485,6 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   {
     type: "paragraph",
     text: "Which is called the famous circle of fifths.",
-  },
-  {
-    type: "image",
-    src: asset("circle-of-fifths-simple.svg"),
-    alt: "Circle of fifths diagram",
-    width: "half",
   },
   {
     type: "circle-of-fifths-simulator",
