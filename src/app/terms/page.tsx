@@ -1,40 +1,24 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { LegalPageShell } from "@/components/legal-page-shell";
 
 export default function TermsPage() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-3xl flex-col gap-6 px-6 py-16">
-      <Card className="gap-0">
-        <CardHeader>
-          <p className="text-sm uppercase tracking-widest text-muted-foreground">
-            Usage & Conditions
-          </p>
-          <CardTitle className="text-4xl">
-            Allgemeine Geschäftsbedingungen (AGB)
-          </CardTitle>
-          <p className="text-muted-foreground">
-            The legally binding German version of our terms is provided below to
-            meet German regulations.
-          </p>
-        </CardHeader>
-        <CardContent className="space-y-8">
+    <LegalPageShell
+      page="terms"
+      title="Allgemeine Geschäftsbedingungen (AGB)"
+    >
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">1. Geltungsbereich</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung der
-              App "Worship Viewer" (nachfolgend "App") durch registrierte und
-              nicht registrierte Nutzer (nachfolgend "Nutzer"). Abweichende
+              App &quot;Worship Viewer&quot; (nachfolgend &quot;App&quot;) durch registrierte und
+              nicht registrierte Nutzer (nachfolgend &quot;Nutzer&quot;). Abweichende
               Bedingungen der Nutzer finden keine Anwendung.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">2. Anbieter</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Anbieter der App ist:
               <br />
               Felix Rollbühler
@@ -45,7 +29,7 @@ export default function TermsPage() {
               <br />
               E-Mail: info@worshipviewer.com
             </p>
-            <p className="text-sm italic text-muted-foreground">
+            <p className="text-sm italic text-[var(--color-muted-foreground)]">
               Die App wird privat betrieben und dient nicht kommerziellen
               Zwecken.
             </p>
@@ -53,7 +37,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">3. Leistungsbeschreibung</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Der Anbieter stellt die App in der jeweils aktuellen Version zur
               Verfügung. Funktionsumfang und Verfügbarkeit können variieren. Ein
               Anspruch auf bestimmte Funktionen, eine bestimmte Verfügbarkeit
@@ -63,7 +47,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">4. Registrierung und Konto</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Für bestimmte Funktionen ist eine Registrierung erforderlich. Die
               bei der Registrierung abgefragten Daten sind wahrheitsgemäß
               anzugeben und aktuell zu halten. Zugangsdaten sind geheim zu
@@ -77,7 +61,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold">
               5. Nutzungsregeln / Missbrauch
             </h2>
-            <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+            <ul className="list-disc space-y-1 pl-5 text-[var(--color-muted-foreground)]">
               <li>
                 Die App darf nur im Rahmen der geltenden Gesetze und dieser AGB
                 genutzt werden.
@@ -96,7 +80,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">6. Entgeltlichkeit</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Die Nutzung der App ist derzeit kostenlos. Sollte der Anbieter
               zukünftig kostenpflichtige Funktionen einführen, werden Nutzer
               hierüber vorab informiert. In diesem Fall gelten die zum Zeitpunkt
@@ -110,7 +94,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold">
               7. Verfügbarkeit, Wartung und Änderungen
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Der Anbieter bemüht sich um einen störungsfreien Betrieb der App,
               kann jedoch Zeiten eingeschränkter Verfügbarkeit (z. B. Wartung,
               Updates, höhere Gewalt) nicht ausschließen. Der Anbieter ist
@@ -122,7 +106,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">8. Haftung</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Der Anbieter stellt die App unentgeltlich und ohne Zusicherung
               bestimmter Funktionen oder Verfügbarkeiten bereit. Eine Haftung
               für materielle oder immaterielle Schäden, die durch die Nutzung
@@ -137,7 +121,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold">
               9. Rechte an Inhalten und Software
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Sämtliche Rechte an der App, insbesondere Urheber- und
               Schutzrechte, verbleiben beim Anbieter bzw. den jeweiligen
               Rechteinhabern. Nutzern wird ein einfaches, nicht übertragbares
@@ -151,7 +135,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-semibold">
               10. Laufzeit und Beendigung
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Diese AGB gelten auf unbestimmte Zeit. Nutzer können die Nutzung
               jederzeit beenden und ihr Konto löschen. Der Anbieter kann
               Nutzerkonten aus wichtigem Grund sperren oder kündigen,
@@ -162,7 +146,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">11. Änderungen der AGB</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Der Anbieter kann diese AGB mit Wirkung für die Zukunft ändern.
               Über wesentliche Änderungen werden Nutzer in geeigneter Form
               informiert. Widersprechen Nutzer der Änderung nicht innerhalb
@@ -174,7 +158,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">12. Datenschutz</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Informationen zur Verarbeitung personenbezogener Daten finden Sie
               in der Datenschutzerklärung.
             </p>
@@ -182,7 +166,7 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">13. Schlussbestimmungen</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss
               des UN-Kaufrechts. Ist der Nutzer Verbraucher mit Wohnsitz in der
               EU, bleiben zwingende Verbraucherschutzvorschriften seines
@@ -192,12 +176,10 @@ export default function TermsPage() {
             </p>
           </section>
 
-          <p className="text-sm italic text-muted-foreground">
+          <p className="text-sm italic text-[var(--color-muted-foreground)]">
             Stand: 10. November 2025
           </p>
-        </CardContent>
-      </Card>
-    </main>
+    </LegalPageShell>
   );
 }
 

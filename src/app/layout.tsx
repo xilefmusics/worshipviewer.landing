@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Rubik, Geist_Mono } from "next/font/google";
+
+import { PreferenceInitScript } from "@/components/preference-init-script";
+import { Providers } from "@/components/providers";
+import { SiteLayout } from "@/components/site-layout";
 import "./globals.css";
-
-const rubikSans = Rubik({
-  variable: "--font-rubik-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Worship Viewer",
@@ -27,11 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${rubikSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <PreferenceInitScript />
+      </head>
+      <body className="antialiased">
+        <Providers>
+          <SiteLayout>{children}</SiteLayout>
+        </Providers>
       </body>
     </html>
   );

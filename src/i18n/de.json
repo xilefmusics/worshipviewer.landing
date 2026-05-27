@@ -1,0 +1,104 @@
+{
+  "preferences": {
+    "languageLabel": "Sprache",
+    "languageBrowser": "Browsereinstellung",
+    "languageEn": "Englisch",
+    "languageDe": "Deutsch",
+    "appearanceLabel": "Darstellung",
+    "appearanceSystem": "System",
+    "appearanceLight": "Hell",
+    "appearanceDark": "Dunkel"
+  },
+  "nav": {
+    "login": "Anmelden",
+    "goToLogin": "Zur Anmeldung"
+  },
+  "hero": {
+    "eyebrow": "Alles zu Seiner Ehre",
+    "title": "Hilft dir beim Leiten des Gottesdienstes – und tritt zurück, wenn der Geist übernimmt.",
+    "subtitle": "Fokus auf den Raum, nicht auf den Bildschirm! Nicht Musik machen – anbeten!",
+    "joinFree": "Jetzt kostenlos mitmachen"
+  },
+  "carousel": {
+    "title": "Erster Eindruck",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "prevAria": "Vorherige Folie anzeigen",
+    "nextAria": "Nächste Folie anzeigen",
+    "slideIndicator": "Folie {{current}} von {{total}}",
+    "goToSlide": "Zu Folie {{index}} springen",
+    "slides": {
+      "planning": {
+        "alt": "Worship Viewer Planungs-Timeline",
+        "caption": "Verwalte und zeige jedes Chart in jeder Tonart – jeder Musiker sieht sofort den Teil, den er braucht."
+      },
+      "import": {
+        "alt": "Worship Viewer Click- und Cue-Beispiel",
+        "caption": "Importiere Songs aus ChordPro, Ultimate Guitar oder erstelle sie in Minuten von Grund auf."
+      },
+      "more": {
+        "alt": "Hinweis auf weitere Funktionen",
+        "caption": "Mehr kommt – automatische Folien, Click- und Cue-Sampling, Teamverwaltung und ein digitaler MD."
+      }
+    }
+  },
+  "features": {
+    "singleSource": {
+      "title": "Eine Quelle der Wahrheit",
+      "description": "Erstelle einen Song einmal und vertraue darauf, dass Charts, Folien, Clicks, Cues und jedes Teammitglied perfekt synchron bleiben."
+    },
+    "preparedYetFree": {
+      "title": "Vorbereitet und dennoch frei",
+      "description": "Plane Sets bis ins Detail, brich aber aus, sobald der Geist führt – starte auch spontanen Worship, ohne den Halt zu verlieren."
+    },
+    "allForHisGlory": {
+      "title": "Alles zu Seiner Ehre",
+      "description": "Der ganze Sinn dieser App ist es, den einen wahren Gott anzubeten und zu verherrlichen – Vater, Sohn und Heiliger Geist."
+    }
+  },
+  "support": {
+    "eyebrow": "Wie du unterstützen kannst",
+    "title": "Mach mit bei der Mission, Worshippern zu dienen",
+    "description": "Engagiere dich, wie Gott es dir auflegt, damit Worship Viewer jedes Team weiter auf Seine Gegenwart ausrichtet.",
+    "praying": {
+      "title": "Beten",
+      "description": "Bitte den Herrn um Versorgung, leite die Vision, bewahre sie für Seinen Ruhm und mache jeden Worshipper, der sie nutzt, zu einem Segen für seine Gemeinde."
+    },
+    "feedback": {
+      "title": "Feedback & Ideen",
+      "description": "Teile jederzeit Erfahrungsberichte, Feature-Wünsche oder Fehlermeldungen unter <1>info@worshipviewer.com</1>."
+    },
+    "contributing": {
+      "title": "Mitwirken",
+      "description": "Bring dich in Design, Code oder Docs ein – offen auf <1>GitHub</1>."
+    },
+    "spreadTheWord": {
+      "title": "Weitersagen",
+      "description": "Wenn Worship Viewer dir dient, lade andere Worship-Teams ein, damit die Community organisch wächst."
+    },
+    "financial": {
+      "title": "Finanzielle Unterstützung",
+      "description": "Es gibt noch keinen offiziellen Spendenkanal, aber wenn Gott es dir auflegt zu geben, schreib an <1>info@worshipviewer.com</1>."
+    }
+  },
+  "footer": {
+    "tagline": "Worship Viewer – Von Worshippern für Worshipper",
+    "imprint": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "terms": "AGB"
+  },
+  "legalPages": {
+    "imprint": {
+      "eyebrow": "Rechtliche Hinweise",
+      "intro": "Dieses deutschsprachige Impressum erfüllt die gesetzlichen Pflichtangaben in Deutschland."
+    },
+    "privacy": {
+      "eyebrow": "Transparenz & Sicherheit",
+      "intro": "Der folgende Inhalt bleibt auf Deutsch, um den deutschen Datenschutzanforderungen zu entsprechen."
+    },
+    "terms": {
+      "eyebrow": "Nutzung & Bedingungen",
+      "intro": "Die rechtsverbindliche deutsche Fassung unserer AGB findest du unten."
+    }
+  }
+}

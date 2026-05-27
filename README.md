@@ -5,8 +5,9 @@ Static Next.js (App Router) landing page for Worship Viewer. It includes a hero 
 ## Local development
 
 ```bash
-npm install
-npm run dev
+corepack enable
+pnpm install
+pnpm dev
 ```
 
 Visit [http://localhost:3000](http://localhost:3000) to preview the site. Update content in `src/app/page.tsx` or the legal pages under `src/app/*/page.tsx`.
@@ -16,11 +17,11 @@ Visit [http://localhost:3000](http://localhost:3000) to preview the site. Update
 The project is configured with `output: "export"`, so `next build` emits static HTML into `out/`.
 
 ```bash
-npm run build:static
+pnpm build:static
 # resulting static assets live in ./out
 ```
 
-You can deploy the contents of `out/` alongside your main application on any static host (Vercel, S3, static nginx, etc.). Use `npx serve out` locally if you want a quick static preview.
+You can deploy the contents of `out/` alongside your main application on any static host (Vercel, S3, static nginx, etc.). Use `pnpm dlx serve out` locally if you want a quick static preview.
 
 ## Docker
 

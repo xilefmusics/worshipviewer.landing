@@ -1,0 +1,104 @@
+{
+  "preferences": {
+    "languageLabel": "Language",
+    "languageBrowser": "Browser default",
+    "languageEn": "English",
+    "languageDe": "German",
+    "appearanceLabel": "Appearance",
+    "appearanceSystem": "System",
+    "appearanceLight": "Light",
+    "appearanceDark": "Dark"
+  },
+  "nav": {
+    "login": "Login",
+    "goToLogin": "Go to Login"
+  },
+  "hero": {
+    "eyebrow": "All for His glory",
+    "title": "Helps you lead worship - then steps aside when the Spirit takes over.",
+    "subtitle": "Focus on the room not the screen! Don't make music - worship!",
+    "joinFree": "Join Now For Free"
+  },
+  "carousel": {
+    "title": "First Impressions",
+    "prev": "Prev",
+    "next": "Next",
+    "prevAria": "View previous slide",
+    "nextAria": "View next slide",
+    "slideIndicator": "Slide {{current}} of {{total}}",
+    "goToSlide": "Go to slide {{index}}",
+    "slides": {
+      "planning": {
+        "alt": "Worship Viewer planning timeline mockup",
+        "caption": "Manage and display every chart in any key, so every worshipper sees the part they need instantly."
+      },
+      "import": {
+        "alt": "Worship Viewer click and cue sample mockup",
+        "caption": "Import songs from ChordPro, Ultimate Guitar, or build them from scratch in minutes."
+      },
+      "more": {
+        "alt": "More features teaser",
+        "caption": "More to come — automatic slides, click and cue sampling, team management, and a digital MD."
+      }
+    }
+  },
+  "features": {
+    "singleSource": {
+      "title": "Single Source of Truth",
+      "description": "Craft a song once, then trust it everywhere—charts, slides, clicks, cues, and every team member stay perfectly in sync."
+    },
+    "preparedYetFree": {
+      "title": "Prepared Yet Free",
+      "description": "Plan sets down to the beat, but break out the instant the Spirit leads—even launch fully spontaneous worship without losing footing."
+    },
+    "allForHisGlory": {
+      "title": "All for His Glory",
+      "description": "The whole purpose of this App is to worship and glorify the one true God - The Father, the Son and the Holy Spirit."
+    }
+  },
+  "support": {
+    "eyebrow": "How to Support",
+    "title": "Join the Mission to Serve Worshippers",
+    "description": "Lean in however God prompts you so Worship Viewer keeps pointing every team toward His presence.",
+    "praying": {
+      "title": "Praying",
+      "description": "Ask the Lord to provide, guide the vision, keep it for His glory, and make every worshipper who uses it a blessing to their community."
+    },
+    "feedback": {
+      "title": "Feedback & Ideas",
+      "description": "Share testimonies, feature requests, or bug reports anytime at <1>info@worshipviewer.com</1>."
+    },
+    "contributing": {
+      "title": "Contributing",
+      "description": "Jump into design, code, or docs by collaborating openly on <1>GitHub</1>."
+    },
+    "spreadTheWord": {
+      "title": "Spread the Word",
+      "description": "If Worship Viewer serves you well, invite other worship teams to try it so the community can grow organically."
+    },
+    "financial": {
+      "title": "Financial Support",
+      "description": "There's no official funding channel yet, but if God puts it on your heart to give, reach out at <1>info@worshipviewer.com</1>."
+    }
+  },
+  "footer": {
+    "tagline": "Worship Viewer - From worshippers for worshippers",
+    "imprint": "Imprint (Impressum)",
+    "privacy": "Privacy Policy (Datenschutzerklärung)",
+    "terms": "Terms & Conditions (AGB)"
+  },
+  "legalPages": {
+    "imprint": {
+      "eyebrow": "Legal Notice",
+      "intro": "This German-language imprint satisfies the mandatory German legal disclosure requirements."
+    },
+    "privacy": {
+      "eyebrow": "Transparency & Security",
+      "intro": "The content below remains in German to comply with German data protection requirements."
+    },
+    "terms": {
+      "eyebrow": "Usage & Conditions",
+      "intro": "The legally binding German version of our terms is provided below to meet German regulations."
+    }
+  }
+}

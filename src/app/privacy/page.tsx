@@ -1,28 +1,11 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { LegalPageShell } from "@/components/legal-page-shell";
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-3xl flex-col gap-6 px-6 py-16">
-      <Card className="gap-0">
-        <CardHeader>
-          <p className="text-sm uppercase tracking-widest text-muted-foreground">
-            Transparency & Security
-          </p>
-          <CardTitle className="text-4xl">Datenschutzerklärung</CardTitle>
-          <p className="text-muted-foreground">
-            The content below remains in German to comply with German data
-            protection requirements.
-          </p>
-        </CardHeader>
-        <CardContent className="space-y-8">
+    <LegalPageShell page="privacy" title="Datenschutzerklärung">
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">1. Verantwortliche Stelle</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Felix Rollbühler
               <br />
               Münklinger Str. 2
@@ -31,7 +14,7 @@ export default function PrivacyPolicyPage() {
               <br />
               E-Mail: info@worshipviewer.com
             </p>
-            <p className="text-sm italic text-muted-foreground">
+            <p className="text-sm italic text-[var(--color-muted-foreground)]">
               Hinweis: Diese App wird privat betrieben und dient nicht
               kommerziellen Zwecken. Es besteht keine gesetzliche Verpflichtung
               zur Benennung eines Datenschutzbeauftragten.
@@ -43,7 +26,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-2xl font-semibold">
                 2. Erhebung und Speicherung personenbezogener Daten
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Beim Besuch dieser Website bzw. bei Nutzung unserer App werden
                 personenbezogene Daten nur im technisch notwendigen Umfang
                 erhoben.
@@ -53,7 +36,7 @@ export default function PrivacyPolicyPage() {
               <p className="font-semibold text-foreground">
                 a) Server-Logfiles (Hosting über Google Cloud Run)
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Wir nutzen Google Cloud Run (Google Ireland Limited, Gordon
                 House, Barrow Street, Dublin 4, Irland) als Hosting-Dienst. Beim
                 Aufruf unserer App bzw. Website werden automatisch
@@ -63,13 +46,13 @@ export default function PrivacyPolicyPage() {
                 dienen ausschließlich der Sicherstellung eines störungsfreien
                 Betriebs, der IT-Sicherheit sowie der Fehleranalyse.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Verarbeitungsort: Die Verarbeitung erfolgt grundsätzlich in
                 Rechenzentren innerhalb der Europäischen Union. Eine
                 Datenübermittlung in Drittländer findet nur statt, sofern die
                 Voraussetzungen der Art. 44 ff. DSGVO erfüllt sind.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Löschung der Logdaten: spätestens nach 30 Tagen.
               </p>
             </div>
@@ -77,16 +60,16 @@ export default function PrivacyPolicyPage() {
               <p className="font-semibold text-foreground">
                 b) Nutzerkonto / Login-Bereich
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Wenn Sie sich registrieren oder anmelden, speichern wir die
                 folgenden Daten:
               </p>
-              <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+              <ul className="list-disc space-y-1 pl-5 text-[var(--color-muted-foreground)]">
                 <li>E-Mail-Adresse</li>
                 <li>Zeitpunkt des letzten Logins</li>
                 <li>Anzahl der getätigten Anfragen</li>
               </ul>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Diese Daten benötigen wir, um den Zugang bereitzustellen,
                 Missbrauch zu verhindern und einfache Nutzungsstatistiken zu
                 führen. Eine Weitergabe an Dritte erfolgt nicht.
@@ -94,7 +77,7 @@ export default function PrivacyPolicyPage() {
             </div>
             <div className="space-y-2">
               <p className="font-semibold text-foreground">c) Kommunikation per E-Mail</p>
-              <p className="text-muted-foreground">
+              <p className="text-[var(--color-muted-foreground)]">
                 Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von
                 Ihnen übermittelten personenbezogenen Daten (z. B. Name,
                 E-Mail-Adresse, Inhalte der Nachricht) zur Bearbeitung Ihres
@@ -109,11 +92,11 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold">
               3. Zwecke und Rechtsgrundlagen der Verarbeitung
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Die Verarbeitung erfolgt zu folgenden Zwecken und auf folgenden
               Rechtsgrundlagen:
             </p>
-            <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+            <ul className="list-disc space-y-1 pl-5 text-[var(--color-muted-foreground)]">
               <li>
                 Bereitstellung, Betrieb, Stabilität und Sicherheit der App bzw.
                 Website (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse:
@@ -137,14 +120,14 @@ export default function PrivacyPolicyPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">4. Weitergabe von Daten</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Eine Übermittlung Ihrer personenbezogenen Daten an Dritte erfolgt
               nur, wenn dies gesetzlich erlaubt ist. Für das Hosting setzen wir
               Google Cloud Run (Google Ireland Limited) als Auftragsverarbeiter
               nach Art. 28 DSGVO ein; Google kann zur Erbringung der Leistungen
               verbundene Unternehmen bzw. Subunternehmer einsetzen.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Mit Google wurde ein Vertrag zur Auftragsverarbeitung (AVV)
               abgeschlossen. Details:
               <a
@@ -157,14 +140,14 @@ export default function PrivacyPolicyPage() {
               </a>
               .
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Eine weitergehende Weitergabe findet nicht statt.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">5. Speicherung und Löschung</h2>
-            <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+            <ul className="list-disc space-y-1 pl-5 text-[var(--color-muted-foreground)]">
               <li>Server-Logfiles: Löschung spätestens nach 30 Tagen.</li>
               <li>
                 Nutzerdaten (E-Mail, letzter Login, Anzahl Anfragen): Speicherung
@@ -189,7 +172,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">6. Ihre Rechte</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
               Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Ihnen
               steht außerdem ein Widerspruchsrecht gegen die Verarbeitung
@@ -197,12 +180,12 @@ export default function PrivacyPolicyPage() {
               Interessen verarbeiten. Eine erteilte Einwilligung können Sie
               jederzeit mit Wirkung für die Zukunft widerrufen.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Wenden Sie sich hierzu bitte an die oben genannte verantwortliche
               Stelle. Ihnen steht zudem ein Beschwerderecht bei einer
               Datenschutzaufsichtsbehörde zu.
             </p>
-            <p className="text-sm italic text-muted-foreground">
+            <p className="text-sm italic text-[var(--color-muted-foreground)]">
               Zuständige Aufsichtsbehörde: Der Landesbeauftragte für den
               Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI
               BW), Lautenschlagerstraße 20, 70173 Stuttgart –
@@ -220,13 +203,13 @@ export default function PrivacyPolicyPage() {
 
           <section className="space-y-2">
             <h2 className="text-2xl font-semibold">7. Datensicherheit</h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Wir setzen technische und organisatorische Maßnahmen ein, um Ihre
               Daten gegen Manipulation, Verlust, Zerstörung oder unbefugten
               Zugriff zu schützen und passen diese fortlaufend an den Stand der
               Technik an.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Die Übertragung personenbezogener Daten erfolgt ausschließlich
               über verschlüsselte Verbindungen (HTTPS/TLS).
             </p>
@@ -236,19 +219,17 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-semibold">
               8. Aktualität und Änderung dieser Datenschutzerklärung
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-[var(--color-muted-foreground)]">
               Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren,
               um sie an geänderte Rechtslagen oder Änderungen des Dienstes
               anzupassen.
             </p>
           </section>
 
-          <p className="text-sm italic text-muted-foreground">
+          <p className="text-sm italic text-[var(--color-muted-foreground)]">
             Stand: 10. November 2025
           </p>
-        </CardContent>
-      </Card>
-    </main>
+    </LegalPageShell>
   );
 }
 
