@@ -11,7 +11,45 @@
   },
   "nav": {
     "login": "Login",
-    "goToLogin": "Go to Login"
+    "goToLogin": "Go to Login",
+    "tutorials": "Tutorials"
+  },
+  "tutorials": {
+    "eyebrow": "Learn & Grow",
+    "title": "Tutorials",
+    "description": "Step-by-step guides to help your team get the most out of Worship Viewer.",
+    "readMore": "Read tutorial",
+    "backToList": "All tutorials",
+    "publishedOn": "Published {{date}}",
+    "empty": "No tutorials yet — check back soon!",
+    "notFound": "This tutorial could not be found.",
+    "tableOfContents": "On this page",
+    "expandChapter": "Expand {{chapter}}",
+    "collapseChapter": "Collapse {{chapter}}",
+    "posts": {
+      "music-theory-for-worshippers": {
+        "title": "Music Theory for Worshippers",
+        "excerpt": "A simple, worship-focused course — from why contemporary worship music is deliberately simple to the physics behind the twelve-tone system."
+      },
+      "getting-started": {
+        "title": "Getting Started with Worship Viewer",
+        "excerpt": "Create your first song, build a set, and go live in under ten minutes.",
+        "sections": [
+          {
+            "heading": "Create an account",
+            "body": "Head to the app and sign up with your email. Once you are in, create or join a team so charts and sets stay in sync for everyone."
+          },
+          {
+            "heading": "Add your first song",
+            "body": "Import from ChordPro or Ultimate Guitar, or build a chart from scratch. Pick the key, add sections, and Worship Viewer keeps every part aligned."
+          },
+          {
+            "heading": "Build a set and go live",
+            "body": "Drag songs into a set list, reorder as needed, and open the live view when worship starts. Every musician sees the chart they need — you stay focused on the room."
+          }
+        ]
+      }
+    }
   },
   "hero": {
     "eyebrow": "All for His glory",

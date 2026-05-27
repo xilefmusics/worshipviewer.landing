@@ -11,7 +11,45 @@
   },
   "nav": {
     "login": "Anmelden",
-    "goToLogin": "Zur Anmeldung"
+    "goToLogin": "Zur Anmeldung",
+    "tutorials": "Tutorials"
+  },
+  "tutorials": {
+    "eyebrow": "Lernen & Wachsen",
+    "title": "Tutorials",
+    "description": "Schritt-für-Schritt-Anleitungen, damit dein Team Worship Viewer optimal nutzt.",
+    "readMore": "Tutorial lesen",
+    "backToList": "Alle Tutorials",
+    "publishedOn": "Veröffentlicht am {{date}}",
+    "empty": "Noch keine Tutorials — schau bald wieder vorbei!",
+    "notFound": "Dieses Tutorial wurde nicht gefunden.",
+    "tableOfContents": "Inhalt",
+    "expandChapter": "{{chapter}} aufklappen",
+    "collapseChapter": "{{chapter}} zuklappen",
+    "posts": {
+      "music-theory-for-worshippers": {
+        "title": "Musiktheorie für Worshipper",
+        "excerpt": "Ein einfacher, worship-orientierter Kurs — von der bewussten Einfachheit zeitgenössischer Worship-Musik bis zur Physik hinter dem Zwölfton-System."
+      },
+      "getting-started": {
+        "title": "Erste Schritte mit Worship Viewer",
+        "excerpt": "Erstelle deinen ersten Song, baue ein Set und starte in unter zehn Minuten live.",
+        "sections": [
+          {
+            "heading": "Konto anlegen",
+            "body": "Geh in die App und melde dich mit deiner E-Mail an. Lege danach ein Team an oder tritt einem bei, damit Charts und Sets für alle synchron bleiben."
+          },
+          {
+            "heading": "Deinen ersten Song hinzufügen",
+            "body": "Importiere aus ChordPro oder Ultimate Guitar oder erstelle ein Chart von Grund auf. Wähle die Tonart, füge Abschnitte hinzu — Worship Viewer hält jeden Part im Takt."
+          },
+          {
+            "heading": "Set bauen und live gehen",
+            "body": "Ziehe Songs in eine Setliste, sortiere sie und öffne die Live-Ansicht, wenn der Gottesdienst beginnt. Jeder Musiker sieht den Chart, den er braucht — du bleibst im Raum präsent."
+          }
+        ]
+      }
+    }
   },
   "hero": {
     "eyebrow": "Alles zu Seiner Ehre",

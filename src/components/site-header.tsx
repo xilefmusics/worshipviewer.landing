@@ -34,6 +34,9 @@ export function SiteHeader() {
 
         <div className="flex flex-wrap items-center gap-3">
           <PreferenceSwitchers />
+          <Button variant="outline" asChild>
+            <Link href="/tutorials">{t("nav.tutorials")}</Link>
+          </Button>
           <Button asChild>
             <Link href="https://app.worshipviewer.com">{t("nav.login")}</Link>
           </Button>
