@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { ScaleSimulator } from "@/components/scale-simulator";
 import type { TutorialEntry } from "@/lib/tutorial-content";
 import { cn } from "@/lib/utils";
 
@@ -71,6 +72,10 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
               />
             </figure>
           );
+        }
+
+        if (entry.type === "scale-simulator") {
+          return <ScaleSimulator key={`scale-simulator-${index}`} />;
         }
 
         return (

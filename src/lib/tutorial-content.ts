@@ -25,11 +25,16 @@ export type TutorialAudio = {
   src: string;
 };
 
+export type TutorialScaleSimulator = {
+  type: "scale-simulator";
+};
+
 export type TutorialEntry =
   | TutorialHeading
   | TutorialParagraph
   | TutorialImage
-  | TutorialAudio;
+  | TutorialAudio
+  | TutorialScaleSimulator;
 
 export type TutorialTocItem = {
   id: string;

@@ -538,6 +538,9 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     level: 2,
   },
   {
+    type: "scale-simulator",
+  },
+  {
     type: "heading",
     id: "chapter-2",
     text: "Chapter 2 Chords",
