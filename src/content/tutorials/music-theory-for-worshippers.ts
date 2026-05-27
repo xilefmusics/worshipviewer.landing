@@ -153,7 +153,7 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   {
     type: "heading",
     id: "chapter-0",
-    text: "Chapter 0 Technical Background",
+    text: "0. Technical Background",
     level: 2,
   },
   {
@@ -534,7 +534,7 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   {
     type: "heading",
     id: "chapter-1",
-    text: "Chapter 1 Scales",
+    text: "1. Scales",
     level: 2,
   },
   {
@@ -543,43 +543,43 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   {
     type: "heading",
     id: "chapter-2",
-    text: "Chapter 2 Chords",
+    text: "2. Chords",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-3",
-    text: "Chapter 3 Context",
+    text: "3. Context",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-4",
-    text: "Chapter 4 Application Piano",
+    text: "4. Application Piano",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-5",
-    text: "Chapter 5 Application Guitar",
+    text: "5. Application Guitar",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-6",
-    text: "Chapter 6 Chord Progressions",
+    text: "6. Chord Progressions",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-7",
-    text: "Chapter 7 Crazy Chords",
+    text: "7. Crazy Chords",
     level: 2,
   },
   {
     type: "heading",
     id: "chapter-8",
-    text: "Chapter 8 Experimenting with Context",
+    text: "8. Experimenting with Context",
     level: 2,
   },
 ];
