@@ -5,6 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
+import {
+  CIRCLE_OF_FIFTHS_NOTES,
+  circleOfFifthsPosition,
+} from "@/lib/circle-of-fifths-notes";
 import { cn } from "@/lib/utils";
 
 const BASE_FREQUENCY = 261.63;
@@ -12,34 +16,8 @@ const NOTE_DURATION = 0.55;
 const NOTE_GAP = 0.12;
 const MASTER_GAIN = 0.28;
 
-const CIRCLE_NOTES = [
-  { label: "C", semitones: 0 },
-  { label: "G", semitones: 7 },
-  { label: "D", semitones: 2 },
-  { label: "A", semitones: 9 },
-  { label: "E", semitones: 4 },
-  { label: "B", semitones: 11 },
-  { label: "G♭", semitones: 6 },
-  { label: "D♭", semitones: 1 },
-  { label: "A♭", semitones: 8 },
-  { label: "E♭", semitones: 3 },
-  { label: "B♭", semitones: 10 },
-  { label: "F", semitones: 5 },
-] as const;
-
-const CONTAINER_SIZE = 280;
-const RADIUS = 96;
-
 function semitonesToFrequency(semitones: number): number {
   return BASE_FREQUENCY * 2 ** (semitones / 12);
-}
-
-function circlePosition(index: number): { x: number; y: number } {
-  const angle = -Math.PI / 2 + (index / CIRCLE_NOTES.length) * 2 * Math.PI;
-  return {
-    x: 50 + (RADIUS / (CONTAINER_SIZE / 2)) * 50 * Math.cos(angle),
-    y: 50 + (RADIUS / (CONTAINER_SIZE / 2)) * 50 * Math.sin(angle),
-  };
 }
 
 export function CircleOfFifthsSimulator() {
@@ -70,7 +48,7 @@ export function CircleOfFifthsSimulator() {
       audioContextRef.current = audioContext;
       await audioContext.resume();
 
-      const note = CIRCLE_NOTES[index];
+      const note = CIRCLE_OF_FIFTHS_NOTES[index];
       const oscillator = audioContext.createOscillator();
       const gain = audioContext.createGain();
       const startTime = audioContext.currentTime;
@@ -119,7 +97,7 @@ export function CircleOfFifthsSimulator() {
     setIsWalking(true);
     setIsPlaying(true);
 
-    for (let step = 0; step < CIRCLE_NOTES.length; step += 1) {
+    for (let step = 0; step < CIRCLE_OF_FIFTHS_NOTES.length; step += 1) {
       setActiveIndex(step);
       await playNoteAtIndex(step);
       await new Promise((resolve) => {
@@ -148,8 +126,8 @@ export function CircleOfFifthsSimulator() {
         <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[11px] font-medium text-[var(--color-muted-foreground)]">
           {t("tutorials.circleOfFifthsSimulator.centerLabel")}
         </span>
-        {CIRCLE_NOTES.map((note, index) => {
-          const { x, y } = circlePosition(index);
+        {CIRCLE_OF_FIFTHS_NOTES.map((note, index) => {
+          const { x, y } = circleOfFifthsPosition(index);
           const isActive = activeIndex === index;
 
           return (

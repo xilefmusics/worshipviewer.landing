@@ -89,6 +89,8 @@
       "stop": "Stoppen",
       "preset": "Vorlage",
       "toggleNote": "{{note}} umschalten",
+      "circleOfFifths": "Tonleiter-Auswahl im Quintenzirkel",
+      "circleCenterLabel": "Quinten",
       "presetGroups": {
         "twelveTone": "12-Ton-Tonleitern",
         "sevenTone": "7-Ton-Tonleitern (Kirchentonarten)",

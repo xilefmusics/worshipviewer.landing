@@ -89,6 +89,8 @@
       "stop": "Stop",
       "preset": "Preset",
       "toggleNote": "Toggle {{note}}",
+      "circleOfFifths": "Circle of fifths scale picker",
+      "circleCenterLabel": "5ths",
       "presetGroups": {
         "twelveTone": "12-tone scales",
         "sevenTone": "7-tone scales (church modes)",

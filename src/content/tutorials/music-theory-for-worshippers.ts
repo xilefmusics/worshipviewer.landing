@@ -500,7 +500,285 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     level: 2,
   },
   {
+    type: "heading",
+    id: "what-is-a-scale",
+    text: "What Is a Scale?",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "Now we know the basic grid of which almost all music I know is made: the twelve semitones we derived from the physics of sound.",
+  },
+  {
+    type: "paragraph",
+    text: "We already achieved a lot — we've come from an indefinite amount of frequencies and now have twelve tones we can do music theory with.",
+  },
+  {
+    type: "paragraph",
+    text: "But twelve is still a lot when we try to combine notes that sound nice together.",
+  },
+  {
+    type: "paragraph",
+    text: "We still have too many combinations.",
+  },
+  {
+    type: "paragraph",
+    text: "But God gave us the ability to think abstractly, and that gift we can use another time.",
+  },
+  {
+    type: "paragraph",
+    text: "Instead of focusing on all twelve notes, we can pick some that sound nice together.",
+  },
+  {
+    type: "paragraph",
+    text: "So we divide the twelve tones into two groups: the ones that are in and the ones that are out.",
+  },
+  {
+    type: "paragraph",
+    text: "And that actually is what a so-called scale is.",
+  },
+  {
+    type: "heading",
+    id: "explore-the-twelve-semitones",
+    text: "Explore the Twelve Semitones",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "Below you'll find a list of all twelve semitones.",
+  },
+  {
+    type: "paragraph",
+    text: "I know these are thirteen, because the first and the last one is the same.",
+  },
+  {
+    type: "paragraph",
+    text: "Now you can randomly pick tones that are in and others that are out and hear how it sounds.",
+  },
+  {
+    type: "paragraph",
+    text: "I've also included some presets of common scales other people came up with over the years.",
+  },
+  {
     type: "scale-simulator",
+  },
+  {
+    type: "heading",
+    id: "the-major-scale",
+    text: "The Major Scale",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "Now you're probably thinking: man, these are a lot of scales…",
+  },
+  {
+    type: "paragraph",
+    text: "But the nice thing is there are only a few that are relevant, and one is so prominent in CCM and our whole western music that it's enough to learn this one and consider the other ones small adjustments — when they do happen, not even in like 1% of the songs.",
+  },
+  {
+    type: "paragraph",
+    text: "And this scale is the major scale.",
+  },
+  {
+    type: "heading",
+    id: "seven-notes-from-the-circle-of-fifths",
+    text: "Seven Notes from the Circle of Fifths",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "This scale may seem random, but actually what sounds good is not random.",
+  },
+  {
+    type: "paragraph",
+    text: "God is a God of order and he designed beauty to have some sort of order.",
+  },
+  {
+    type: "paragraph",
+    text: "In the Middle Ages our western scales were born by choosing seven out of the twelve tones.",
+  },
+  {
+    type: "paragraph",
+    text: "Why seven?",
+  },
+  {
+    type: "paragraph",
+    text: "Because it's the perfect number.",
+  },
+  {
+    type: "paragraph",
+    text: "The godly (three, Trinity) and the earthly (four, the four cardinal directions) come together.",
+  },
+  {
+    type: "paragraph",
+    text: "That's what Jesus achieved on the cross.",
+  },
+  {
+    type: "paragraph",
+    text: "I don't know if this is why they chose seven, but they did choose it.",
+  },
+  {
+    type: "paragraph",
+    text: "And instead of randomly picking seven notes, they used the first seven gifts inside the circle of fifths we already saw in chapter 0 — out of which the twelve tones are built.",
+  },
+  {
+    type: "paragraph",
+    text: "And this leads us to the unique pattern that is so prominent it impacted the design of the piano: the seven white keys that are in and the five black keys that are out.",
+  },
+  {
+    type: "paragraph",
+    text: "What they did in the Middle Ages: they took the first seven fifths, brought them into order, and gave them the first seven letters of the alphabet — A, B, C, D, E, F, G.",
+  },
+  {
+    type: "paragraph",
+    text: "But now you have seven possibilities to play this scale.",
+  },
+  {
+    type: "paragraph",
+    text: "You can start on A, the Aeolian scale; you can start on B, the Locrian scale; and so on.",
+  },
+  {
+    type: "paragraph",
+    text: "Those seven scales are called the seven church modes.",
+  },
+  {
+    type: "paragraph",
+    text: "Two of them later got renamed to Major — the one starting on C — and Minor — the one starting on A.",
+  },
+  {
+    type: "paragraph",
+    text: "And the major one is the most prominent; basically every worship song is built on it.",
+  },
+  {
+    type: "paragraph",
+    text: "That's why it's good to learn the structure of it.",
+  },
+  {
+    type: "paragraph",
+    text: "We always skip a tone except between E and F and B and C.",
+  },
+  {
+    type: "paragraph",
+    text: "These are the so-called half-tone steps in the scale.",
+  },
+  {
+    type: "heading",
+    id: "playing-the-major-scale",
+    text: "Playing the Major Scale",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "If you want to play that scale on piano, you can start in front of the two black keys and play eight tones.",
+  },
+  {
+    type: "paragraph",
+    text: "If you are on the guitar, you can start wherever you want and just skip one fret if there is a tone that is out.",
+  },
+  {
+    type: "heading",
+    id: "keys-and-scale-degrees",
+    text: "Keys and Scale Degrees (1–7)",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "So the major scale it is — the one we should remember and what we will use later on.",
+  },
+  {
+    type: "paragraph",
+    text: "That major scale you can basically start on each tone, and the pattern defines what tones are in and what are out.",
+  },
+  {
+    type: "paragraph",
+    text: "It's always the same pattern.",
+  },
+  {
+    type: "paragraph",
+    text: "And this we call the keys.",
+  },
+  {
+    type: "paragraph",
+    text: "So the key of C is actually that basic one: C–D–E–F–G–A–B–C.",
+  },
+  {
+    type: "paragraph",
+    text: "For example, the key of Ab is the same pattern applied starting on Ab: Ab–Bb–C–Db–Eb–F–G–Ab.",
+  },
+  {
+    type: "paragraph",
+    text: "But to make our lives easier and key-independent, we just give the seven tones inside that scale the numbers 1–7.",
+  },
+  {
+    type: "paragraph",
+    text: "This makes it easier for us to do theory with, and it as well makes it easier to play together with others who may use a capo on the guitar or transpose on the keyboard.",
+  },
+  {
+    type: "paragraph",
+    text: "The 1 is always the 1 and the 4 is always the 4, and that makes communicating much easier.",
+  },
+  {
+    type: "paragraph",
+    text: "Another benefit is it's much easier to identify patterns across different songs.",
+  },
+  {
+    type: "paragraph",
+    text: "Because it's not a random combination of chords and tones, but it's always the same patterns.",
+  },
+  {
+    type: "heading",
+    id: "pentatonic-and-mixolydian",
+    text: "Pentatonic and Mixolydian (For Later)",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "There are two other scales that maybe are relevant later on.",
+  },
+  {
+    type: "paragraph",
+    text: "One is the pentatonic scales — this uses the same principle as our major scale, but has only five instead of seven tones.",
+  },
+  {
+    type: "paragraph",
+    text: "And yes, those are the first five in the circle of fifths; therefore it misses the 4 and the 7.",
+  },
+  {
+    type: "paragraph",
+    text: "So it's basically the major scale without the 4 and the 7.",
+  },
+  {
+    type: "paragraph",
+    text: "This is sometimes useful for improvising, especially on instruments like the electric guitar.",
+  },
+  {
+    type: "paragraph",
+    text: "The other one is the Mixolydian scale — the one out of the seven church modes that starts on G.",
+  },
+  {
+    type: "paragraph",
+    text: "But you can think of it as the major scale with the flat seven — so you make the 7 one tone lower.",
+  },
+  {
+    type: "paragraph",
+    text: "It may help to select it from the presets and compare it with the major scale.",
+  },
+  {
+    type: "paragraph",
+    text: "This scale is used in some worship songs to bring a really cool touch to it.",
+  },
+  {
+    type: "paragraph",
+    text: "Examples are the legendary Revelation Song by Jennie Lee Riddle / Gateway Worship, Open the Heavens by Gateway Worship, and Give Thanks by Henry Smith has as well some elements of it.",
+  },
+  {
+    type: "paragraph",
+    text: "You do not have to bother that much with those two scales.",
+  },
+  {
+    type: "paragraph",
+    text: "Focus on the major scale, and then when you need them the small adjustments shouldn't be that hard later.",
   },
   {
     type: "heading",

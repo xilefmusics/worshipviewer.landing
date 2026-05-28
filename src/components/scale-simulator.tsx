@@ -5,6 +5,10 @@ import { useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
+import {
+  CIRCLE_OF_FIFTHS_NOTES,
+  circleOfFifthsPosition,
+} from "@/lib/circle-of-fifths-notes";
 import { cn } from "@/lib/utils";
 
 const CHROMATIC_SEMITONES = 12;
@@ -335,6 +339,41 @@ export function ScaleSimulator() {
               )}
             >
               {label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        className="relative mx-auto mt-4 aspect-square w-full max-w-[280px] rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]"
+        role="group"
+        aria-label={t("tutorials.scaleSimulator.circleOfFifths")}
+      >
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[11px] font-medium text-[var(--color-muted-foreground)]">
+          {t("tutorials.scaleSimulator.circleCenterLabel")}
+        </span>
+        {CIRCLE_OF_FIFTHS_NOTES.map((note, index) => {
+          const { x, y } = circleOfFifthsPosition(index);
+          const enabled = selection[note.semitones];
+
+          return (
+            <button
+              key={`circle-${note.semitones}`}
+              type="button"
+              aria-pressed={enabled}
+              aria-label={t("tutorials.scaleSimulator.toggleNote", {
+                note: note.label,
+              })}
+              onClick={() => toggleSemitone(note.semitones)}
+              style={{ left: `${x}%`, top: `${y}%` }}
+              className={cn(
+                "absolute size-11 -translate-x-1/2 -translate-y-1/2 rounded-full border text-sm font-medium transition-colors",
+                enabled
+                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]"
+                  : "border-[var(--color-border)] bg-[var(--color-muted)] text-[var(--color-foreground)] hover:bg-[var(--color-muted)]/80",
+              )}
+            >
+              {note.label}
             </button>
           );
         })}
