@@ -787,10 +787,262 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
     level: 2,
   },
   {
+    type: "paragraph",
+    text: "Modern Worship Music is pretty simple as we already seen multiple times and the same holds true for chords.",
+  },
+  {
+    type: "paragraph",
+    text: "But what is a chord? We know what tones are and that there are 7 different ones of them we have to think of when doing music theory for worship, the 7 tones of the major scale.",
+  },
+  {
+    type: "paragraph",
+    text: "A chord basically is the combination of tones. And basically defines the current mood. It could be happy, sad, warm, dissonant, or whatever.",
+  },
+  {
+    type: "paragraph",
+    text: "Each chord within a song has a specific function and depending on how we arrange them we get different feelings uplifting, ongoing, finishing, etc.",
+  },
+  {
+    type: "paragraph",
+    text: "So in theory there are a lot of different chords basically any combination you can think of of the 7 tones, puh at least we narrowed down the scope to that already.",
+  },
+  {
+    type: "heading",
+    id: "the-6-basic-chords",
+    text: "The 6 basic chords",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "But as there are only 7 tones there are as well only 6 chords we have to think of and these are the basic triads of the scale.",
+  },
+  {
+    type: "paragraph",
+    text: "How do we get them? We start with any tone of the scale like the 1 and stack thirds on top of it so (1, 3, 5) for the 2 it's (2, 4, 6) and so on.",
+  },
+  {
+    type: "paragraph",
+    text: "We only have to remember, that the 8 is the one again, so the 5 would be (5, 7, 2). I guess you got that.",
+  },
+  {
+    type: "paragraph",
+    text: "So we get the 6 basic chords of a key. Why 6 and not 7 you now probably ask. Yes there is a 7, but it's basically never used and therefore not worth talking about. And the 6 chords are:",
+  },
+  {
+    type: "table",
+    headers: ["Chord", "Tones"],
+    rows: [
+      ["1", "1, 3, 5"],
+      ["2m", "2, 4, 6"],
+      ["3m", "3, 5, 7"],
+      ["4", "4, 6, 1"],
+      ["5", "5, 7, 2"],
+      ["6m", "6, 1, 3"],
+    ],
+  },
+  {
+    type: "paragraph",
+    text: "And for the ones of us who can actually read notes, this is how it looks like within the key of C:",
+  },
+  {
+    type: "chord-staff",
+    chords: [
+      { label: "1", notes: ["C4", "E4", "G4"] },
+      { label: "2m", notes: ["D4", "F4", "A4"] },
+      { label: "3m", notes: ["E4", "G4", "B4"] },
+      { label: "4", notes: ["F4", "A4", "C5"] },
+      { label: "5", notes: ["G4", "B4", "D5"] },
+      { label: "6m", notes: ["A4", "C5", "E5"] },
+    ],
+  },
+  {
+    type: "heading",
+    id: "major-and-minor",
+    text: "Major and Minor",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "You now maybe wondered, why I wrote an m behind the 2, 3 and 6 and not behind the 1, 3 and 5. That's because they are minor.",
+  },
+  {
+    type: "paragraph",
+    text: "What does this mean, we will see within this section. Such a basic chord can either be major (bright, happy) or minor (mellow, sad). If we associate other emotions with it, it's fine.",
+  },
+  {
+    type: "paragraph",
+    text: "Let's find out if you can hear the difference:",
+  },
+  {
+    type: "chord-examples-player",
+    chords: [
+      { label: "1", notes: ["C4", "E4", "G4"] },
+      { label: "2m", notes: ["D4", "F4", "A4"] },
+      { label: "3m", notes: ["E4", "G4", "B4"] },
+      { label: "4", notes: ["F4", "A4", "C5"] },
+      { label: "5", notes: ["G4", "B4", "D5"] },
+      { label: "6m", notes: ["A4", "C5", "E5"] },
+    ],
+  },
+  {
+    type: "paragraph",
+    text: "Alright I hope you heard the difference, but why is this as it is? To understand this, we have to take a look again at the major scale:",
+  },
+  {
+    type: "scale-simulator",
+    readOnly: true,
+    preset: "major",
+  },
+  {
+    type: "paragraph",
+    text: "As we can see since 7 tones are in and 5 are out, there are two places, where two tones after each other are in. That's between the 3 and the 4 and between the 7 and the 1.",
+  },
+  {
+    type: "paragraph",
+    text: "If you now count the actual semitones between the 1 and the 3 you will see, that it's 5 and if you count between the 3 and the 5 you will see it's only 4. That means even though if we only look at our 7 in scale tones the distance looks always the same, it can be different. It can be 5 semitones, what we call a major third and it can be only 4 semitones, what we call a minor third.",
+  },
+  {
+    type: "paragraph",
+    text: "If you now have a look again at our 6 basic chords and you do some simple counting, you will see that for the 1, 4, and 5 we have a major third on the bottom and a minor third on the top and for the 2, 3 and 6, it's the other way around. And that's why three of them are minor and three of them are major.",
+  },
+  {
+    type: "paragraph",
+    text: "Just a side note, for nerds like me, the counting is fun, but it's ok if you just learn 1, 2m, 3m, 4, 5, 6m by heart. So if a chord is minor, we add an m and if it's major, we leave it away. It's as simple as that.",
+  },
+  {
+    type: "paragraph",
+    text: "Some other useful side note is, that you can make any chord that is minor major, by lifting up the middle note, the third one half step and the other way around. This might get useful later on.",
+  },
+  {
+    type: "heading",
+    id: "the-7-chord",
+    text: "The 7 Chord",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "Even though it's not that practical for the nerds of us, I would like to show the full picture and talk about the 7 chord, because in theory it is there.",
+  },
+  {
+    type: "paragraph",
+    text: "But why does nobody use it within worship music? It's because it's neither major nor minor. If you do the counting again and start at the 7 this time, you will notice from the 7 to the 2 it's a minor third and from the 2 to the 4 it's a minor third as well. This chord is called diminished. It has some unstable sound, that sounds nice within the correct context, but is not useful for the flowing worship moments.",
+  },
+  {
+    type: "paragraph",
+    text: "Another reason might be that throughout the history the tritone so the distance from the 7 to the 5 which is as well some half step less than the other chords, was often associated with the devil.",
+  },
+  {
+    type: "heading",
+    id: "slash-chords",
+    text: "Slash Chords",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "In addition to the 6 chords 1, 2m, 3m, 4, 5, 6m, we can not iterate it often enough, so please learn it. You might see something like 1/3 or 4/5 etc. That means Take the 1 chord or the 4 chord and use an other base note. We do not care if this note is within the chord or not.",
+  },
+  {
+    type: "paragraph",
+    text: "So for 1/3 the 3 is within the 1 chord. Therefore it's just a reordering of the notes, so that the 3 is on the bottom, but for 4/5, the 5 is not actually within the chord, so it wins and gains an additional fourth note for it's bass.",
+  },
+  {
     type: "heading",
     id: "chapter-3",
     text: "3. Context",
     level: 2,
+  },
+  {
+    type: "paragraph",
+    text: "Did you know that the bible teaches that there is no god? Before you grab through the internet and stone me, I can prove you. Please read Psalm 14.1. Ah funny, you know what I did, I took it out of context. And as you should remember to never take something out of context when reading your bible you should add context to your chords too.",
+  },
+  {
+    type: "paragraph",
+    text: "But what is the context of a chord. The same chord for example the C chord is the 1 within the key of C, but it's the 5 within the key of F and it's the 4 within the key of G. The chord stays the same, but the context shifts and therefore the chord fulfils another purpose.",
+  },
+  {
+    type: "paragraph",
+    text: "So each of the 6 basic chords of the key of a key has its own purpose. We will talk more about that within some further chapter, but the one is the home, the 6m is home, but different, the 4 is its stable neighbour, the 5 and the 2m want to lead you somewhere and the 3m is just that weird guy that sound absolutely stunning. Now you got some other glimpses of my weird brain :). But what's important chord has a specific function given its context.",
+  },
+  {
+    type: "paragraph",
+    text: "If we play a song, we automatically put the chord into its context, because it's surrounded by the other 5 or at least parts of them and in almost every case it's clear, what is the key and therefore what is the purpose of this chord.",
+  },
+  {
+    type: "paragraph",
+    text: "I said almost every case, because there is some ongoing discussion about the Revelation Song, we talked earlier about in context of the Mixolydian scale.",
+  },
+  {
+    type: "paragraph",
+    text: "So if the context is clear, why do we need to talk about it? It's because most worshippers do add additional notes to a chord that put it into context. That's because our ear works in a way that we find it sounding good if there are parts that change and parts that stay the same. So we have some sort of movement and some sort of constant. It's a nice representation for what happens in real life. Our emotions (the chords) change regularly, but the context, we're put in, god, his word, his love and his mercy for us never changes.",
+  },
+  {
+    type: "paragraph",
+    text: "Now that I'm done preaching, let's see, how to do this.",
+  },
+  {
+    type: "heading",
+    id: "the-1-and-the-5",
+    text: "The 1 and the 5",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "It's pretty simple in addition to the three notes of a basic chord we do add the 1 and the 5. That's no law, that's just how basically everyone does it. You can only add the 1 or only the 5, or you could get more crazy and add the 1,2 and 5, or you add the 1 and 3 like Gateway Worship does with some of their songs. You have full freedom, but for simplicity start with what 99% of the time is done.",
+  },
+  {
+    type: "paragraph",
+    text: "From now on I will call the 1 and the 5 The Context. They sound nice to every chord. A lot of melodies, solos, etc. are build around this foundation. But how do we add that to our chords. It's simple as that, we just add it. Some chords, like the 1 stay the same, some others gain one additional note and some others even two.",
+  },
+  {
+    type: "paragraph",
+    text: "Within the table below, you see all the chords as a table and of course notes again:",
+  },
+  {
+    type: "table",
+    headers: ["Chord", "Tones"],
+    rows: [
+      ["1", "1, 3, 5"],
+      ["2m47", "2, 4, 6, 1, 5"],
+      ["3m7", "3, 5, 7, 1"],
+      ["42", "4, 6, 1, 5"],
+      ["54", "5, 7, 2, 1"],
+      ["6m7", "6, 1, 3, 5"],
+    ],
+  },
+  {
+    type: "chord-staff",
+    chords: [
+      { label: "1", notes: ["E4", "G4", "C5"] },
+      { label: "2m47", notes: ["D4", "F4", "A4", { note: "G4", headSide: "right" }, "C5"] },
+      { label: "3m7", notes: ["E4", "G4", "B4", { note: "C5", headSide: "right" }] },
+      { label: "42", notes: ["F4", "A4", { note: "G4", headSide: "right" }, "C5"] },
+      { label: "54", notes: ["G4", "B4", "D4", { note: "C5", headSide: "right" }] },
+      { label: "6m7", notes: ["A4", "E4", { note: "G4", headSide: "right" }, "C5"] },
+    ],
+  },
+  {
+    type: "paragraph",
+    text: "That's it as simple as that. If your worship team plays with a tonic pad (a pad that is just constant throughout the whole song), this are exactly the two notes this pad plays. It fills space and gives context. But even if you play with such a pad or not. And no matter if you play guitar or piano, or whatever, it's always nice to add this notes. In my playing I always add them. The 4 chord does not exist for me without the 2 so the 5 of the key. There are some easy patterns for piano and guitar to play them without even noticing and that's why I told you within the introduction, that you will play chords with crazy extensions without even noticing and that you can ignore them within the worship setting. In 99% of the cases the extensions they add to the chords within the sheets, are exactly that. It may vary a bit for example the 2m47 may be written as 2m7add11 or whatever, but it's the same only named differently. You do not need to understand that to make great worship. You can just ignore them and add your own context, the one you know of.",
+  },
+  {
+    type: "heading",
+    id: "critique",
+    text: "Critique",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "You may like adding context or not, you can do it or not. Basically every big worship band does it. It's the defacto standard. I sometimes hear from guys coming from my church music background that this just muddies up everything and turns it into a soup of sound and that this is some new fashion-driven thing. This is nothing new. The great Bach did it within a lot of his masterpieces and other composers as well. This is no concept that was invented within the modern pop music, the concept of that my 1 stays as context throughout the whole song is known throughout the history as pedal point (Orgelpunkt in German). Some small old organs even have a dedicated switch to let the bass note stay throughout the whole piece of music.",
+  },
+  {
+    type: "heading",
+    id: "the-1-3-confusion",
+    text: "The 1-3 confusion",
+    level: 3,
+  },
+  {
+    type: "paragraph",
+    text: "I know we're at the basics and we want to get to the technical stuff, but one more advanced topic is so present that I want to clarify it now. You don't have to fully understand it now, but you have to know that it's there. Some guys like to add the 7 to the 1 chord, so that it's 1-3-5-7. It's then called the 1maj7. Major seven because of the semitone steps in between. We saw the 7 already within the 6m7 chord. The difference again is the counting. The maj7 has one semitone more than the seven and if you count for the 1 then it's major. But anyway if we take the 1/3 with that major seven and compare it to the 3m with respect to the context, we will notice, that both of them are the same, they all consist out of 3-5-7-1. So the 3m and the 1/3 can be used interchangeable, they may highlight a different accent color, but are technically the same. I tell you this because I often saw them used interchangeably. Some sheets use the 1/3 and some the 3m. One example is the song What a Beautiful name it is. It has within the bridge the common power progression 4-5-6m-1/3. And some sheets use the chords 4-5-6m-3m. I don't know if you care, but now you know why. But that was the last theoretical topic. I promise you.",
   },
   {
     type: "heading",

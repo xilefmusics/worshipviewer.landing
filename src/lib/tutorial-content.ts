@@ -12,6 +12,27 @@ export type TutorialParagraph = {
   text: string;
 };
 
+export type TutorialTable = {
+  type: "table";
+  headers: string[];
+  rows: string[][];
+};
+
+export type TutorialChordStaff = {
+  type: "chord-staff";
+  chords: Array<{
+    label: string;
+    notes: Array<
+      | string
+      | {
+          note: string;
+          headSide?: "left" | "right";
+        }
+    >;
+  }>;
+  playback?: boolean;
+};
+
 export type TutorialImage = {
   type: "image";
   src: string;
@@ -27,6 +48,20 @@ export type TutorialAudio = {
 
 export type TutorialScaleSimulator = {
   type: "scale-simulator";
+  readOnly?: boolean;
+  preset?: "major";
+};
+
+export type TutorialMajorMinorPlayer = {
+  type: "major-minor-player";
+};
+
+export type TutorialChordExamplesPlayer = {
+  type: "chord-examples-player";
+  chords: Array<{
+    label: string;
+    notes: string[];
+  }>;
 };
 
 export type TutorialToneSimulator = {
@@ -48,13 +83,17 @@ export type TutorialCircleOfFifthsSimulator = {
 export type TutorialEntry =
   | TutorialHeading
   | TutorialParagraph
+  | TutorialTable
+  | TutorialChordStaff
   | TutorialImage
   | TutorialAudio
   | TutorialScaleSimulator
   | TutorialToneSimulator
   | TutorialHarmonicSimulator
   | TutorialIntervalSimulator
-  | TutorialCircleOfFifthsSimulator;
+  | TutorialCircleOfFifthsSimulator
+  | TutorialMajorMinorPlayer
+  | TutorialChordExamplesPlayer;
 
 export type TutorialTocItem = {
   id: string;

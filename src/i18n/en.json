@@ -48,6 +48,14 @@
         "custom": "Custom"
       }
     },
+    "chordPlayer": {
+      "play": "Play all 6 chords",
+      "stop": "Stop"
+    },
+    "majorMinorPlayer": {
+      "play": "Hear major vs minor",
+      "stop": "Stop"
+    },
     "intervalSimulator": {
       "play": "Play interval",
       "stop": "Stop",

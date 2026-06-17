@@ -48,6 +48,14 @@
         "custom": "Eigene Auswahl"
       }
     },
+    "chordPlayer": {
+      "play": "Alle 6 Akkorde abspielen",
+      "stop": "Stoppen"
+    },
+    "majorMinorPlayer": {
+      "play": "Dur vs. Moll hören",
+      "stop": "Stoppen"
+    },
     "intervalSimulator": {
       "play": "Intervall abspielen",
       "stop": "Stoppen",

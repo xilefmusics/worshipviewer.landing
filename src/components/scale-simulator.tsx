@@ -237,10 +237,16 @@ function detectPreset(selection: boolean[]): ScalePresetKey | "custom" {
   return "custom";
 }
 
-export function ScaleSimulator() {
+export function ScaleSimulator({
+  readOnly = false,
+  preset = "major",
+}: {
+  readOnly?: boolean;
+  preset?: ScalePresetKey;
+} = {}) {
   const { t } = useTranslation();
   const [selection, setSelection] = useState<boolean[]>(() =>
-    semitonesToSelection([...SCALE_PRESETS.major]),
+    semitonesToSelection([...SCALE_PRESETS[preset]]),
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const audioContextRef = useRef<AudioContext | null>(null);
@@ -321,6 +327,27 @@ export function ScaleSimulator() {
       <div className="flex flex-wrap gap-1.5">
         {NOTE_BUTTONS.map(({ label, semitone, ariaNote }) => {
           const enabled = selection[semitone];
+          const className = cn(
+            "min-w-[2.25rem] flex-1 rounded-md border px-1 py-2 text-center text-xs font-medium sm:text-sm",
+            enabled
+              ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]"
+              : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-muted-foreground)]",
+            !readOnly &&
+              !enabled &&
+              "transition-colors hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)]",
+          );
+
+          if (readOnly) {
+            return (
+              <div
+                key={semitone}
+                aria-hidden={!enabled}
+                className={className}
+              >
+                {label}
+              </div>
+            );
+          }
 
           return (
             <button
@@ -331,12 +358,7 @@ export function ScaleSimulator() {
                 note: ariaNote,
               })}
               onClick={() => toggleSemitone(semitone)}
-              className={cn(
-                "min-w-[2.25rem] flex-1 rounded-md border px-1 py-2 text-center text-xs font-medium transition-colors sm:text-sm",
-                enabled
-                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]"
-                  : "border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-muted-foreground)] hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)]",
-              )}
+              className={className}
             >
               {label}
             </button>
@@ -344,99 +366,103 @@ export function ScaleSimulator() {
         })}
       </div>
 
-      <div
-        className="relative mx-auto mt-4 aspect-square w-full max-w-[280px] rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]"
-        role="group"
-        aria-label={t("tutorials.scaleSimulator.circleOfFifths")}
-      >
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[11px] font-medium text-[var(--color-muted-foreground)]">
-          {t("tutorials.scaleSimulator.circleCenterLabel")}
-        </span>
-        {CIRCLE_OF_FIFTHS_NOTES.map((note, index) => {
-          const { x, y } = circleOfFifthsPosition(index);
-          const enabled = selection[note.semitones];
-
-          return (
-            <button
-              key={`circle-${note.semitones}`}
-              type="button"
-              aria-pressed={enabled}
-              aria-label={t("tutorials.scaleSimulator.toggleNote", {
-                note: note.label,
-              })}
-              onClick={() => toggleSemitone(note.semitones)}
-              style={{ left: `${x}%`, top: `${y}%` }}
-              className={cn(
-                "absolute size-11 -translate-x-1/2 -translate-y-1/2 rounded-full border text-sm font-medium transition-colors",
-                enabled
-                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]"
-                  : "border-[var(--color-border)] bg-[var(--color-muted)] text-[var(--color-foreground)] hover:bg-[var(--color-muted)]/80",
-              )}
-            >
-              {note.label}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="mt-4 flex flex-wrap items-center gap-3">
-        <Button
-          type="button"
-          size="sm"
-          onClick={() => {
-            if (isPlaying) {
-              stopPlayback();
-              return;
-            }
-            void playScale();
-          }}
-          disabled={selectionToSemitones(selection).length === 0}
-          aria-label={
-            isPlaying
-              ? t("tutorials.scaleSimulator.stop")
-              : t("tutorials.scaleSimulator.play")
-          }
+      {readOnly ? null : (
+        <div
+          className="relative mx-auto mt-4 aspect-square w-full max-w-[280px] rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]"
+          role="group"
+          aria-label={t("tutorials.scaleSimulator.circleOfFifths")}
         >
-          {isPlaying ? <Square className="size-3.5" /> : <Play className="size-3.5" />}
-          {isPlaying
-            ? t("tutorials.scaleSimulator.stop")
-            : t("tutorials.scaleSimulator.play")}
-        </Button>
-
-        <label className="flex min-w-[12rem] flex-1 items-center gap-2 text-sm">
-          <span className="shrink-0 text-[var(--color-muted-foreground)]">
-            {t("tutorials.scaleSimulator.preset")}
+          <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[11px] font-medium text-[var(--color-muted-foreground)]">
+            {t("tutorials.scaleSimulator.circleCenterLabel")}
           </span>
-          <select
-            value={activePreset}
-            onChange={(event) => {
-              const value = event.target.value;
-              if (value !== "custom" && value in SCALE_PRESETS) {
-                applyPreset(value as ScalePresetKey);
-              }
-            }}
-            className="h-9 w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-sm text-[var(--color-foreground)] outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
-          >
-            {SCALE_PRESET_GROUPS.map(({ groupKey, presets }) => (
-              <optgroup
-                key={groupKey}
-                label={t(`tutorials.scaleSimulator.presetGroups.${groupKey}`)}
+          {CIRCLE_OF_FIFTHS_NOTES.map((note, index) => {
+            const { x, y } = circleOfFifthsPosition(index);
+            const enabled = selection[note.semitones];
+
+            return (
+              <button
+                key={`circle-${note.semitones}`}
+                type="button"
+                aria-pressed={enabled}
+                aria-label={t("tutorials.scaleSimulator.toggleNote", {
+                  note: note.label,
+                })}
+                onClick={() => toggleSemitone(note.semitones)}
+                style={{ left: `${x}%`, top: `${y}%` }}
+                className={cn(
+                  "absolute size-11 -translate-x-1/2 -translate-y-1/2 rounded-full border text-sm font-medium transition-colors",
+                  enabled
+                    ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-primary-foreground)]"
+                    : "border-[var(--color-border)] bg-[var(--color-muted)] text-[var(--color-foreground)] hover:bg-[var(--color-muted)]/80",
+                )}
               >
-                {presets.map((key) => (
-                  <option key={key} value={key}>
-                    {getPresetLabel(key, t)}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-            {activePreset === "custom" ? (
-              <option value="custom">
-                {t("tutorials.scaleSimulator.presets.custom")}
-              </option>
-            ) : null}
-          </select>
-        </label>
-      </div>
+                {note.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {readOnly ? null : (
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <Button
+            type="button"
+            size="sm"
+            onClick={() => {
+              if (isPlaying) {
+                stopPlayback();
+                return;
+              }
+              void playScale();
+            }}
+            disabled={selectionToSemitones(selection).length === 0}
+            aria-label={
+              isPlaying
+                ? t("tutorials.scaleSimulator.stop")
+                : t("tutorials.scaleSimulator.play")
+            }
+          >
+            {isPlaying ? <Square className="size-3.5" /> : <Play className="size-3.5" />}
+            {isPlaying
+              ? t("tutorials.scaleSimulator.stop")
+              : t("tutorials.scaleSimulator.play")}
+          </Button>
+
+          <label className="flex min-w-[12rem] flex-1 items-center gap-2 text-sm">
+            <span className="shrink-0 text-[var(--color-muted-foreground)]">
+              {t("tutorials.scaleSimulator.preset")}
+            </span>
+            <select
+              value={activePreset}
+              onChange={(event) => {
+                const value = event.target.value;
+                if (value !== "custom" && value in SCALE_PRESETS) {
+                  applyPreset(value as ScalePresetKey);
+                }
+              }}
+              className="h-9 w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-sm text-[var(--color-foreground)] outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+            >
+              {SCALE_PRESET_GROUPS.map(({ groupKey, presets }) => (
+                <optgroup
+                  key={groupKey}
+                  label={t(`tutorials.scaleSimulator.presetGroups.${groupKey}`)}
+                >
+                  {presets.map((key) => (
+                    <option key={key} value={key}>
+                      {getPresetLabel(key, t)}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+              {activePreset === "custom" ? (
+                <option value="custom">
+                  {t("tutorials.scaleSimulator.presets.custom")}
+                </option>
+              ) : null}
+            </select>
+          </label>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,7 +1,11 @@
 import Image from "next/image";
 
+import { ChordExamplesPlayer } from "@/components/chord-examples-player";
+import { ChordPlayer } from "@/components/chord-player";
+import { ChordStaff } from "@/components/chord-staff";
 import { CircleOfFifthsSimulator } from "@/components/circle-of-fifths-simulator";
 import { HarmonicSimulator } from "@/components/harmonic-simulator";
+import { MajorMinorPlayer } from "@/components/major-minor-player";
 import { IntervalSimulator } from "@/components/interval-simulator";
 import { ScaleSimulator } from "@/components/scale-simulator";
 import { ToneSimulator } from "@/components/tone-simulator";
@@ -61,6 +65,56 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
           );
         }
 
+        if (entry.type === "table") {
+          return (
+            <div
+              key={`table-${index}`}
+              className="overflow-x-auto rounded-lg border border-[var(--color-border)]"
+            >
+              <table className="w-full text-sm">
+                <thead className="border-b border-[var(--color-border)] bg-[var(--color-muted)]/30">
+                  <tr>
+                    {entry.headers.map((header) => (
+                      <th
+                        key={header}
+                        className="px-4 py-3 text-left font-medium text-[var(--color-foreground)]"
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {entry.rows.map((row, rowIndex) => (
+                    <tr
+                      key={rowIndex}
+                      className="border-b border-[var(--color-border)] last:border-b-0"
+                    >
+                      {row.map((cell, cellIndex) => (
+                        <td
+                          key={cellIndex}
+                          className="px-4 py-3 text-[var(--color-muted-foreground)]"
+                        >
+                          {renderInlineText(cell)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
+        if (entry.type === "chord-staff") {
+          return (
+            <div key={`chord-staff-${index}`} className="space-y-3">
+              <ChordStaff chords={entry.chords} />
+              {entry.playback ? <ChordPlayer chords={entry.chords} /> : null}
+            </div>
+          );
+        }
+
         if (entry.type === "image") {
           return (
             <figure key={`image-${index}`} className="space-y-2">
@@ -79,7 +133,26 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
         }
 
         if (entry.type === "scale-simulator") {
-          return <ScaleSimulator key={`scale-simulator-${index}`} />;
+          return (
+            <ScaleSimulator
+              key={`scale-simulator-${index}`}
+              readOnly={entry.readOnly}
+              preset={entry.preset}
+            />
+          );
+        }
+
+        if (entry.type === "major-minor-player") {
+          return <MajorMinorPlayer key={`major-minor-player-${index}`} />;
+        }
+
+        if (entry.type === "chord-examples-player") {
+          return (
+            <ChordExamplesPlayer
+              key={`chord-examples-player-${index}`}
+              chords={entry.chords}
+            />
+          );
         }
 
         if (entry.type === "tone-simulator") {
