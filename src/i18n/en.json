@@ -14,7 +14,9 @@
     "home": "Home",
     "login": "Login",
     "goToLogin": "Go to Login",
-    "tutorials": "Tutorials"
+    "tutorials": "Tutorials",
+    "menu": "Main menu",
+    "openMenu": "Open menu"
   },
   "tutorials": {
     "eyebrow": "Learn & Grow",
@@ -183,29 +185,6 @@
     "subtitle": "Focus on the room not the screen! Don't make music - worship!",
     "joinFree": "Join Now For Free"
   },
-  "carousel": {
-    "title": "First Impressions",
-    "prev": "Prev",
-    "next": "Next",
-    "prevAria": "View previous slide",
-    "nextAria": "View next slide",
-    "slideIndicator": "Slide {{current}} of {{total}}",
-    "goToSlide": "Go to slide {{index}}",
-    "slides": {
-      "planning": {
-        "alt": "Worship Viewer planning timeline mockup",
-        "caption": "Manage and display every chart in any key, so every worshipper sees the part they need instantly."
-      },
-      "import": {
-        "alt": "Worship Viewer click and cue sample mockup",
-        "caption": "Import songs from ChordPro, Ultimate Guitar, or build them from scratch in minutes."
-      },
-      "more": {
-        "alt": "More features teaser",
-        "caption": "More to come — automatic slides, click and cue sampling, team management, and a digital MD."
-      }
-    }
-  },
   "features": {
     "singleSource": {
       "title": "Single Source of Truth",
@@ -218,6 +197,80 @@
     "allForHisGlory": {
       "title": "All for His Glory",
       "description": "The whole purpose of this App is to worship and glorify the one true God - The Father, the Son and the Holy Spirit."
+    }
+  },
+  "story": {
+    "eyebrow": "How it works",
+    "title": "The story behind Worship Viewer",
+    "description": "Start with a free account on any device, create a song once, then use it everywhere.",
+    "hint": "Hover or tap a step",
+    "screenshotSoon": "Screenshot coming soon",
+    "nodes": {
+      "createAccount": {
+        "label": "Log in to create your free account",
+        "description": "Sign up in minutes — Worship Viewer is free to join, so you can start building songs the same day.",
+        "alt": "Create a free Worship Viewer account"
+      },
+      "ios": {
+        "label": "iOS",
+        "description": "Use Worship Viewer on iPhone and iPad, with the same songs and sets as everywhere else.",
+        "alt": "Worship Viewer on iOS"
+      },
+      "android": {
+        "label": "Android",
+        "description": "Bring the same charts and sets to Android phones and tablets.",
+        "alt": "Worship Viewer on Android"
+      },
+      "web": {
+        "label": "Web",
+        "description": "Open it in the browser on any computer — no install required.",
+        "alt": "Worship Viewer in the browser"
+      },
+      "importSong": {
+        "label": "Create / import your first song",
+        "description": "Bring a song in from ChordPro or Ultimate Guitar, or write it from scratch. That one chart is the source for every other output.",
+        "alt": "Song editor with a ChordPro source on the right and a live sheet preview on the left"
+      },
+      "sheets": {
+        "label": "Display the sheets",
+        "description": "Put charts on every stand in any key, so each musician sees the part they need without extra files.",
+        "alt": "Live sheet view showing a formatted chord chart for the selected song"
+      },
+      "slides": {
+        "label": "Display the slides",
+        "description": "Generate lyric slides from the same song so the room can sing along without maintaining a second deck.",
+        "alt": "Lyric slides generated from the song"
+      },
+      "clicks": {
+        "label": "Auto-sample click, cue & pad",
+        "description": "Hear a click, spoken cues, and pads derived from the chart — so the band can lock in without a separate session.",
+        "alt": "Click, cue, and pad sampling from the song"
+      },
+      "pdfs": {
+        "label": "Export PDFs",
+        "description": "Print or share a PDF of the chart when someone still needs paper, without rebuilding the song.",
+        "alt": "PDF export of the song chart"
+      },
+      "planSets": {
+        "label": "Plan your sets",
+        "description": "Build the order of service from the same songs — rearrange, repeat, or leave room to follow the Spirit.",
+        "alt": "Set list planner built from your songs"
+      },
+      "shareTeam": {
+        "label": "Share with your team",
+        "description": "Invite the band into one shared set so every musician sees the same songs, keys, and changes.",
+        "alt": "Team sharing for a worship set"
+      },
+      "liveSessions": {
+        "label": "Worship together in live sessions",
+        "description": "Go live with the room — charts, slides, and cues stay in sync while you lead.",
+        "alt": "Live worship session with the team"
+      },
+      "digitalMd": {
+        "label": "Lead through the set using the digital MD",
+        "description": "Let the digital MD keep the band on the arrangement — cues, transitions, and the next song — so you can stay with the room.",
+        "alt": "Digital MD leading through a worship set"
+      }
     }
   },
   "support": {

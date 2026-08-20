@@ -14,7 +14,9 @@
     "home": "Startseite",
     "login": "Anmelden",
     "goToLogin": "Zur Anmeldung",
-    "tutorials": "Tutorials"
+    "tutorials": "Tutorials",
+    "menu": "Hauptmenü",
+    "openMenu": "Menü öffnen"
   },
   "tutorials": {
     "eyebrow": "Lernen & Wachsen",
@@ -183,29 +185,6 @@
     "subtitle": "Fokus auf den Raum, nicht auf den Bildschirm! Nicht Musik machen – anbeten!",
     "joinFree": "Jetzt kostenlos mitmachen"
   },
-  "carousel": {
-    "title": "Erster Eindruck",
-    "prev": "Zurück",
-    "next": "Weiter",
-    "prevAria": "Vorherige Folie anzeigen",
-    "nextAria": "Nächste Folie anzeigen",
-    "slideIndicator": "Folie {{current}} von {{total}}",
-    "goToSlide": "Zu Folie {{index}} springen",
-    "slides": {
-      "planning": {
-        "alt": "Worship Viewer Planungs-Timeline",
-        "caption": "Verwalte und zeige jedes Chart in jeder Tonart – jeder Musiker sieht sofort den Teil, den er braucht."
-      },
-      "import": {
-        "alt": "Worship Viewer Click- und Cue-Beispiel",
-        "caption": "Importiere Songs aus ChordPro, Ultimate Guitar oder erstelle sie in Minuten von Grund auf."
-      },
-      "more": {
-        "alt": "Hinweis auf weitere Funktionen",
-        "caption": "Mehr kommt – automatische Folien, Click- und Cue-Sampling, Teamverwaltung und ein digitaler MD."
-      }
-    }
-  },
   "features": {
     "singleSource": {
       "title": "Eine Quelle der Wahrheit",
@@ -218,6 +197,80 @@
     "allForHisGlory": {
       "title": "Alles zu Seiner Ehre",
       "description": "Der ganze Sinn dieser App ist es, den einen wahren Gott anzubeten und zu verherrlichen – Vater, Sohn und Heiliger Geist."
+    }
+  },
+  "story": {
+    "eyebrow": "So funktioniert's",
+    "title": "Die Geschichte hinter Worship Viewer",
+    "description": "Starte mit einem kostenlosen Konto auf jedem Gerät, erstelle einen Song einmal und nutze ihn überall.",
+    "hint": "Bewege den Zeiger über einen Schritt oder tippe ihn an",
+    "screenshotSoon": "Screenshot folgt",
+    "nodes": {
+      "createAccount": {
+        "label": "Anmelden und kostenloses Konto anlegen",
+        "description": "In Minuten registriert — Worship Viewer ist kostenlos, du kannst noch am selben Tag Songs bauen.",
+        "alt": "Kostenloses Worship-Viewer-Konto anlegen"
+      },
+      "ios": {
+        "label": "iOS",
+        "description": "Nutze Worship Viewer auf iPhone und iPad — mit denselben Songs und Sets wie überall sonst.",
+        "alt": "Worship Viewer auf iOS"
+      },
+      "android": {
+        "label": "Android",
+        "description": "Dieselben Charts und Sets auf Android-Handys und -Tablets.",
+        "alt": "Worship Viewer auf Android"
+      },
+      "web": {
+        "label": "Web",
+        "description": "Öffne es im Browser auf jedem Computer — ohne Installation.",
+        "alt": "Worship Viewer im Browser"
+      },
+      "importSong": {
+        "label": "Ersten Song erstellen / importieren",
+        "description": "Hole einen Song aus ChordPro oder Ultimate Guitar oder schreibe ihn von Grund auf. Dieser eine Chart ist die Quelle für jede weitere Ausgabe.",
+        "alt": "Song-Editor mit ChordPro-Quelle rechts und Live-Sheet-Vorschau links"
+      },
+      "sheets": {
+        "label": "Sheets anzeigen",
+        "description": "Zeige Charts auf jedem Ständer in jeder Tonart — jeder Musiker sieht den Teil, den er braucht, ohne extra Dateien.",
+        "alt": "Live-Sheet-Ansicht mit formatiertem Chord-Chart für den gewählten Song"
+      },
+      "slides": {
+        "label": "Folien anzeigen",
+        "description": "Erzeuge Lyric-Folien aus demselben Song, damit der Raum mitsingen kann, ohne ein zweites Deck zu pflegen.",
+        "alt": "Lyric-Folien, erzeugt aus dem Song"
+      },
+      "clicks": {
+        "label": "Click, Cue & Pad automatisch erzeugen",
+        "description": "Hör einen Click, gesprochene Cues und Pads aus dem Chart — die Band rastet ein, ohne eine separate Session.",
+        "alt": "Click-, Cue- und Pad-Sampling aus dem Song"
+      },
+      "pdfs": {
+        "label": "PDFs exportieren",
+        "description": "Drucke oder teile ein PDF des Charts, wenn jemand Papier braucht — ohne den Song neu zu bauen.",
+        "alt": "PDF-Export des Song-Charts"
+      },
+      "planSets": {
+        "label": "Sets planen",
+        "description": "Baue den Ablauf aus denselben Songs — ordne um, wiederhole, oder lass Raum, dem Geist zu folgen.",
+        "alt": "Setlisten-Planer aus deinen Songs"
+      },
+      "shareTeam": {
+        "label": "Mit dem Team teilen",
+        "description": "Lade die Band in ein gemeinsames Set ein, damit jeder dieselben Songs, Tonarten und Änderungen sieht.",
+        "alt": "Team-Freigabe für ein Worship-Set"
+      },
+      "liveSessions": {
+        "label": "Gemeinsam live anbeten",
+        "description": "Geh mit dem Raum live — Charts, Folien und Cues bleiben im Takt, während du leitest.",
+        "alt": "Live-Worship-Session mit dem Team"
+      },
+      "digitalMd": {
+        "label": "Das Set mit dem digitalen MD leiten",
+        "description": "Der digitale MD hält die Band im Arrangement — Cues, Übergänge und den nächsten Song — damit du beim Raum bleiben kannst.",
+        "alt": "Digitaler MD leitet durch ein Worship-Set"
+      }
     }
   },
   "support": {
