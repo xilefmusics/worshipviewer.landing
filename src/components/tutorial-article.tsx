@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TutorialContentRenderer } from "@/components/tutorial-content-renderer";
+import { InProgressLabel } from "@/components/in-progress-label";
 import { TutorialTableOfContents } from "@/components/tutorial-table-of-contents";
 import {
   Card,
@@ -150,11 +151,15 @@ export function TutorialArticle({ slug }: { slug: string }) {
 
         <Card className="min-w-0 gap-0">
           <CardHeader>
-            <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-muted-foreground)]">
-              {t("tutorials.publishedOn", {
-                date: formatPublishedDate(tutorial.date, i18n.language),
-              })}
-            </p>
+            {tutorial.status === "inProgress" ? (
+              <InProgressLabel />
+            ) : (
+              <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-muted-foreground)]">
+                {t("tutorials.publishedOn", {
+                  date: formatPublishedDate(tutorial.date, i18n.language),
+                })}
+              </p>
+            )}
             <CardTitle className="text-4xl">
               {t(`tutorials.posts.${slug}.title`)}
             </CardTitle>

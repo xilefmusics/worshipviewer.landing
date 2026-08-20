@@ -1042,36 +1042,41 @@ export const musicTheoryForWorshippers: TutorialEntry[] = [
   },
   {
     type: "paragraph",
-    text: "I know we're at the basics and we want to get to the technical stuff, but one more advanced topic is so present that I want to clarify it now. You don't have to fully understand it now, but you have to know that it's there. Some guys like to add the 7 to the 1 chord, so that it's 1-3-5-7. It's then called the 1maj7. Major seven because of the semitone steps in between. We saw the 7 already within the 6m7 chord. The difference again is the counting. The maj7 has one semitone more than the seven and if you count for the 1 then it's major. But anyway if we take the 1/3 with that major seven and compare it to the 3m with respect to the context, we will notice, that both of them are the same, they all consist out of 3-5-7-1. So the 3m and the 1/3 can be used interchangeable, they may highlight a different accent color, but are technically the same. I tell you this because I often saw them used interchangeably. Some sheets use the 1/3 and some the 3m. One example is the song What a Beautiful name it is. It has within the bridge the common power progression 4-5-6m-1/3. And some sheets use the chords 4-5-6m-3m. I don't know if you care, but now you know why. But that was the last theoretical topic. I promise you.",
+    text: "I know we're at the basics and we want to get to the practical stuff, but one more advanced topic is so present that I want to clarify it now. You don't have to fully understand it now, but you have to know that it's there. Some guys like to add the 7 to the 1 chord, so that it's 1-3-5-7. It's then called the 1maj7. Major seven because of the semitone steps in between. We saw the 7 already within the 6m7 chord. The difference again is the counting. The maj7 has one semitone more than the seven and if you count for the 1 then it's major. But anyway if we take the 1/3 with that major seven and compare it to the 3m with respect to the context, we will notice, that both of them are the same, they all consist out of 3-5-7-1. So the 3m and the 1/3 can be used interchangeable, they may highlight a different accent color, but are technically the same. I tell you this because I often saw them used interchangeably. Some sheets use the 1/3 and some the 3m. One example is the song What a Beautiful name it is. It has within the bridge the common power progression 4-5-6m-1/3. And some sheets use the chords 4-5-6m-3m. I don't know if you care, but now you know why. But that was the last theoretical topic. I promise you.",
   },
   {
     type: "heading",
     id: "chapter-4",
     text: "4. Application Piano",
     level: 2,
+    comingSoon: true,
   },
   {
     type: "heading",
     id: "chapter-5",
     text: "5. Application Guitar",
     level: 2,
+    comingSoon: true,
   },
   {
     type: "heading",
     id: "chapter-6",
     text: "6. Chord Progressions",
     level: 2,
+    comingSoon: true,
   },
   {
     type: "heading",
     id: "chapter-7",
     text: "7. Crazy Chords",
     level: 2,
+    comingSoon: true,
   },
   {
     type: "heading",
     id: "chapter-8",
     text: "8. Experimenting with Context",
     level: 2,
+    comingSoon: true,
   },
 ];

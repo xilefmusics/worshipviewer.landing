@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { ComingSoonLabel } from "@/components/coming-soon-label";
 import {
   getChapterForSection,
   type TutorialTocChapter,
@@ -121,7 +122,12 @@ export function TutorialTableOfContents({
                     activeSectionId === chapter.id ? "location" : undefined
                   }
                 >
-                  {chapter.text}
+                  <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                    {chapter.text}
+                    {chapter.comingSoon ? (
+                      <ComingSoonLabel className="px-2 py-px text-[0.65rem] tracking-[0.1em]" />
+                    ) : null}
+                  </span>
                 </a>
               </div>
 
@@ -149,7 +155,12 @@ export function TutorialTableOfContents({
                           )}
                           aria-current={isActive ? "location" : undefined}
                         >
-                          {subsection.text}
+                          <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                            {subsection.text}
+                            {subsection.comingSoon ? (
+                              <ComingSoonLabel className="px-2 py-px text-[0.65rem] tracking-[0.1em]" />
+                            ) : null}
+                          </span>
                         </a>
                       </li>
                     );

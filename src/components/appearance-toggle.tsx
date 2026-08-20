@@ -30,13 +30,40 @@ function resolveTheme(
     : "light";
 }
 
-export function AppearanceToggle({ className }: { className?: string }) {
+export function AppearancePreferenceMenu() {
   const { t } = useTranslation();
   const [preference, setPreference] = useState<AppearancePreference>(() =>
     typeof globalThis.window === "undefined"
       ? "system"
       : readAppearancePreference(),
   );
+
+  function handleChange(next: AppearancePreference) {
+    setPreference(next);
+    writeAppearancePreference(next);
+    applyAppearancePreference(next);
+  }
+
+  return (
+    <DropdownMenuRadioGroup
+      value={preference}
+      onValueChange={(value) => handleChange(value as AppearancePreference)}
+    >
+      <DropdownMenuRadioItem value="light">
+        {t("preferences.appearanceLight")}
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="dark">
+        {t("preferences.appearanceDark")}
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="system">
+        {t("preferences.appearanceSystem")}
+      </DropdownMenuRadioItem>
+    </DropdownMenuRadioGroup>
+  );
+}
+
+export function AppearanceToggle({ className }: { className?: string }) {
+  const { t } = useTranslation();
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
@@ -59,14 +86,7 @@ export function AppearanceToggle({ className }: { className?: string }) {
       media.removeEventListener("change", syncTheme);
       observer.disconnect();
     };
-  }, [preference]);
-
-  function handleChange(next: AppearancePreference) {
-    setPreference(next);
-    writeAppearancePreference(next);
-    applyAppearancePreference(next);
-    setResolvedTheme(resolveTheme(next));
-  }
+  }, []);
 
   return (
     <DropdownMenu>
@@ -94,22 +114,7 @@ export function AppearanceToggle({ className }: { className?: string }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup
-          value={preference}
-          onValueChange={(value) =>
-            handleChange(value as AppearancePreference)
-          }
-        >
-          <DropdownMenuRadioItem value="light">
-            {t("preferences.appearanceLight")}
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="dark">
-            {t("preferences.appearanceDark")}
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="system">
-            {t("preferences.appearanceSystem")}
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+        <AppearancePreferenceMenu />
       </DropdownMenuContent>
     </DropdownMenu>
   );

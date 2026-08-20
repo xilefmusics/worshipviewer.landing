@@ -7,9 +7,11 @@
     "appearanceLabel": "Appearance",
     "appearanceSystem": "System",
     "appearanceLight": "Light",
-    "appearanceDark": "Dark"
+    "appearanceDark": "Dark",
+    "settingsLabel": "Settings"
   },
   "nav": {
+    "home": "Home",
     "login": "Login",
     "goToLogin": "Go to Login",
     "tutorials": "Tutorials"
@@ -26,6 +28,8 @@
     "tableOfContents": "On this page",
     "expandChapter": "Expand {{chapter}}",
     "collapseChapter": "Collapse {{chapter}}",
+    "comingSoon": "Coming soon",
+    "inProgress": "In progress",
     "toneSimulator": {
       "play": "Play tone",
       "stop": "Stop",

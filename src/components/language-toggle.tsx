@@ -30,7 +30,7 @@ function readLocalePreference(): LocalePreference {
   );
 }
 
-export function LanguageToggle({ className }: { className?: string }) {
+export function LanguagePreferenceMenu() {
   const { t, i18n } = useTranslation();
   const [preference, setPreference] = useState<LocalePreference>(() =>
     typeof globalThis.window === "undefined"
@@ -58,6 +58,27 @@ export function LanguageToggle({ className }: { className?: string }) {
   }
 
   return (
+    <DropdownMenuRadioGroup
+      value={preference}
+      onValueChange={(value) => void handleChange(value as LocalePreference)}
+    >
+      <DropdownMenuRadioItem value="browser">
+        {t("preferences.languageBrowser")}
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="en">
+        {t("preferences.languageEn")}
+      </DropdownMenuRadioItem>
+      <DropdownMenuRadioItem value="de">
+        {t("preferences.languageDe")}
+      </DropdownMenuRadioItem>
+    </DropdownMenuRadioGroup>
+  );
+}
+
+export function LanguageToggle({ className }: { className?: string }) {
+  const { t } = useTranslation();
+
+  return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
@@ -70,22 +91,7 @@ export function LanguageToggle({ className }: { className?: string }) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup
-          value={preference}
-          onValueChange={(value) =>
-            void handleChange(value as LocalePreference)
-          }
-        >
-          <DropdownMenuRadioItem value="browser">
-            {t("preferences.languageBrowser")}
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="en">
-            {t("preferences.languageEn")}
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="de">
-            {t("preferences.languageDe")}
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+        <LanguagePreferenceMenu />
       </DropdownMenuContent>
     </DropdownMenu>
   );

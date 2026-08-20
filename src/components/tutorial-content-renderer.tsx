@@ -4,6 +4,7 @@ import { ChordExamplesPlayer } from "@/components/chord-examples-player";
 import { ChordPlayer } from "@/components/chord-player";
 import { ChordStaff } from "@/components/chord-staff";
 import { CircleOfFifthsSimulator } from "@/components/circle-of-fifths-simulator";
+import { ComingSoonLabel } from "@/components/coming-soon-label";
 import { HarmonicSimulator } from "@/components/harmonic-simulator";
 import { MajorMinorPlayer } from "@/components/major-minor-player";
 import { IntervalSimulator } from "@/components/interval-simulator";
@@ -43,13 +44,14 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
               key={entry.id}
               id={entry.id}
               className={cn(
-                "scroll-mt-8 font-semibold",
+                "scroll-mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 font-semibold",
                 entry.level === 2
                   ? "pt-4 text-2xl first:pt-0"
                   : "pt-2 text-xl",
               )}
             >
               {entry.text}
+              {entry.comingSoon ? <ComingSoonLabel /> : null}
             </HeadingTag>
           );
         }

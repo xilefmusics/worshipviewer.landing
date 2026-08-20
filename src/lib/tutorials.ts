@@ -1,16 +1,19 @@
 export type TutorialMeta = {
   slug: string;
   date: string;
+  status?: "inProgress";
 };
 
 export const tutorials: TutorialMeta[] = [
   {
     slug: "music-theory-for-worshippers",
     date: "2026-05-27",
+    status: "inProgress",
   },
   {
     slug: "getting-started",
     date: "2025-05-27",
+    status: "inProgress",
   },
 ];
 

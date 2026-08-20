@@ -7,9 +7,11 @@
     "appearanceLabel": "Darstellung",
     "appearanceSystem": "System",
     "appearanceLight": "Hell",
-    "appearanceDark": "Dunkel"
+    "appearanceDark": "Dunkel",
+    "settingsLabel": "Einstellungen"
   },
   "nav": {
+    "home": "Startseite",
     "login": "Anmelden",
     "goToLogin": "Zur Anmeldung",
     "tutorials": "Tutorials"
@@ -26,6 +28,8 @@
     "tableOfContents": "Inhalt",
     "expandChapter": "{{chapter}} aufklappen",
     "collapseChapter": "{{chapter}} zuklappen",
+    "comingSoon": "Demnächst",
+    "inProgress": "In Arbeit",
     "toneSimulator": {
       "play": "Ton abspielen",
       "stop": "Stoppen",

@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { InProgressLabel } from "@/components/in-progress-label";
 import { tutorials } from "@/lib/tutorials";
 
 function formatPublishedDate(date: string, locale: string) {
@@ -51,11 +52,15 @@ export default function TutorialsPage() {
             >
               <Card className="transition-colors group-hover:border-[var(--color-primary)]/40">
                 <CardHeader>
-                  <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-muted-foreground)]">
-                    {t("tutorials.publishedOn", {
-                      date: formatPublishedDate(tutorial.date, i18n.language),
-                    })}
-                  </p>
+                  {tutorial.status === "inProgress" ? (
+                    <InProgressLabel />
+                  ) : (
+                    <p className="text-xs font-medium uppercase tracking-[0.15em] text-[var(--color-muted-foreground)]">
+                      {t("tutorials.publishedOn", {
+                        date: formatPublishedDate(tutorial.date, i18n.language),
+                      })}
+                    </p>
+                  )}
                   <CardTitle className="text-2xl group-hover:text-[var(--color-primary)]">
                     {t(`tutorials.posts.${tutorial.slug}.title`)}
                   </CardTitle>

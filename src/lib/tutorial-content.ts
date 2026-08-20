@@ -5,6 +5,7 @@ export type TutorialHeading = {
   id: string;
   text: string;
   level: 2 | 3;
+  comingSoon?: boolean;
 };
 
 export type TutorialParagraph = {
@@ -99,11 +100,13 @@ export type TutorialTocItem = {
   id: string;
   text: string;
   level: 2 | 3;
+  comingSoon?: boolean;
 };
 
 export type TutorialTocChapter = {
   id: string;
   text: string;
+  comingSoon?: boolean;
   subsections: TutorialTocItem[];
 };
 
@@ -151,7 +154,12 @@ export function getTutorialContent(slug: string): TutorialEntry[] | undefined {
 export function getTutorialToc(entries: TutorialEntry[]): TutorialTocItem[] {
   return entries
     .filter((entry): entry is TutorialHeading => entry.type === "heading")
-    .map(({ id, text, level }) => ({ id, text, level }));
+    .map(({ id, text, level, comingSoon }) => ({
+      id,
+      text,
+      level,
+      comingSoon,
+    }));
 }
 
 export function getTutorialTocChapters(
@@ -161,7 +169,12 @@ export function getTutorialTocChapters(
 
   for (const item of items) {
     if (item.level === 2) {
-      chapters.push({ id: item.id, text: item.text, subsections: [] });
+      chapters.push({
+        id: item.id,
+        text: item.text,
+        comingSoon: item.comingSoon,
+        subsections: [],
+      });
       continue;
     }
 
