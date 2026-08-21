@@ -70,7 +70,7 @@ type LightboxImage = {
 type StoryDiagramState = {
   openId: string | null;
   prefersHover: boolean;
-  onToggle: (id: string) => void;
+  onToggle: (id: string, wasOpen: boolean) => void;
   onHover: (id: string | null) => void;
   onOpenLightbox: (image: LightboxImage) => void;
 };
@@ -205,7 +205,7 @@ function StoryNodeCard({
         aria-expanded={open}
         aria-controls={detailsId}
         onClick={(event) => {
-          onToggle(node.id);
+          onToggle(node.id, open);
           if (open) {
             event.currentTarget.blur();
           }
@@ -365,8 +365,9 @@ export function StoryDiagram() {
   const diagramRef = useRef<HTMLDivElement>(null);
   const openId = (prefersHover ? hoveredId : null) ?? expandedId;
 
-  const onToggle = useCallback((id: string) => {
-    setExpandedId((current) => (current === id ? null : id));
+  const onToggle = useCallback((id: string, wasOpen: boolean) => {
+    setHoveredId(null);
+    setExpandedId(wasOpen ? null : id);
   }, []);
 
   useEffect(() => {

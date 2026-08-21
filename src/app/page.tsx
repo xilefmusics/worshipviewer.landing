@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main className="mx-auto flex max-w-5xl flex-col gap-12 px-6 py-16">
-      <section className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.9fr)] lg:gap-12">
+      <section className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,1.1fr)] lg:gap-12">
         <div className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-foreground)] sm:text-[0.8125rem]">
             {t("hero.eyebrow")}
@@ -55,18 +55,46 @@ export default function Home() {
               className="aspect-[4/3] w-full rounded-xl border border-[var(--color-border)] object-cover object-top"
               priority
             />
-            <div className="px-2 pb-1 pt-3 text-xs text-[var(--color-muted-foreground)]">
+            <div className="flex items-center gap-2 px-2 pb-1 pt-3 text-xs text-[var(--color-muted-foreground)]">
+              <span
+                className="size-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"
+                aria-hidden
+              />
               <span>{t("hero.productCaption")}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <SocialProof />
-
       <FeatureCards />
 
       <StoryDiagram />
+
+      <section className="overflow-hidden rounded-2xl border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/8 px-6 py-10 text-center sm:px-10 sm:py-12">
+        <div className="mx-auto max-w-2xl space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)] sm:text-[0.8125rem]">
+            {t("finalCta.eyebrow")}
+          </p>
+          <h2 className="text-balance text-3xl font-semibold">
+            {t("finalCta.title")}
+          </h2>
+          <p className="text-base leading-relaxed text-[var(--color-muted-foreground)]">
+            {t("finalCta.description")}
+          </p>
+          <div className="flex flex-col items-center gap-3 pt-2">
+            <Button asChild size="lg">
+              <Link href="https://app.worshipviewer.com">
+                {t("hero.primaryCta")}
+              </Link>
+            </Button>
+            <p className="text-sm text-[var(--color-muted-foreground)]">
+              {t("hero.joinFree")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <SocialProof />
 
       <SupportCards />
     </main>

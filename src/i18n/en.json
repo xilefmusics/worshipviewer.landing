@@ -249,7 +249,12 @@
     "secondaryCta": "See how it works",
     "joinFree": "Free to join. Start in your browser.",
     "productImageAlt": "Worship Viewer displaying a synchronized chord chart and set list",
-    "productCaption": "One song. Every musician. Always in sync."
+    "productCaption": "One song. Charts and slides. Every musician in sync."
+  },
+  "finalCta": {
+    "eyebrow": "Ready for your next set",
+    "title": "Prepare together. Lead with freedom.",
+    "description": "Bring songs, charts, slides, and sets into one shared place — then stay free to respond to what God is doing in the room."
   },
   "socialProof": {
     "eyebrow": "Stories from the room",
@@ -305,7 +310,7 @@
   },
   "story": {
     "eyebrow": "How it works",
-    "title": "The story behind Worship Viewer",
+    "title": "See how one song powers the whole team",
     "description": "Start with a free account on any device, create a song once, then use it everywhere.",
     "hint": "Hover or tap a step",
     "screenshotSoon": "Screenshot coming soon",

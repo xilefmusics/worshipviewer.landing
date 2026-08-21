@@ -243,30 +243,35 @@
   },
   "hero": {
     "eyebrow": "Alles zu Seiner Ehre",
-    "title": "Leite Worship mit Sicherheit – und bleib frei, dem Geist zu folgen.",
-    "subtitle": "Halte dein Team im Einklang, ohne den Raum aus dem Blick zu verlieren. Bereite dich gut vor, reagiere frei und konzentriere dich auf Anbetung statt auf Bildschirme.",
+    "title": "Leite Worship sicher – und bleib frei, dem Heiligen Geist zu folgen.",
+    "subtitle": "Konzentriere dich auf den Raum, nicht auf den Bildschirm. Mach nicht nur Musik – bete an!",
     "primaryCta": "Kostenlos starten",
     "secondaryCta": "So funktioniert’s",
-    "joinFree": "Kostenlos mitmachen. Direkt im Browser starten.",
-    "productImageAlt": "Worship Viewer mit synchronisiertem Akkord-Sheet und Setliste",
-    "productCaption": "Ein Song. Alle Musiker. Immer im Einklang."
+    "joinFree": "Kostenlos loslegen. Direkt im Browser.",
+    "productImageAlt": "Worship Viewer mit synchronisiertem Akkordblatt und Setliste",
+    "productCaption": "Ein Song. Das ganze Team. Immer auf demselben Stand."
+  },
+  "finalCta": {
+    "eyebrow": "Bereit für das nächste Set?",
+    "title": "Gemeinsam vorbereiten. Frei anbeten.",
+    "description": "Songs, Akkordblätter, Folien und Sets an einem Ort – damit ihr im Moment frei auf Gottes Wirken reagieren könnt."
   },
   "socialProof": {
-    "eyebrow": "Geschichten aus dem Raum",
-    "title": "Für echte Worship-Teams entwickelt",
-    "description": "Worship Viewer steht noch am Anfang. Diese Plätze sind für ehrliche Erfahrungen von Teams reserviert, die es in ihren Gemeinden einsetzen – ohne erfundenes Lob.",
+    "eyebrow": "Erfahrungen aus der Praxis",
+    "title": "Für echte Worship-Teams gemacht",
+    "description": "Worship Viewer steht noch am Anfang. Hier sollen später ehrliche Erfahrungen von Teams aus ihren Gemeinden stehen – keine erfundenen Lobeshymnen.",
     "placeholderLabel": "Platzhalter für Erfahrungsbericht",
     "cards": {
       "worshipLeader": {
-        "quote": "Hier könnte euer Worship-Team erzählen, wie es mit mehr Freiheit leitet.",
-        "role": "Worship-Leitung"
+        "quote": "Hier könnte ein Worship-Leiter erzählen, wie sein Team freier leiten und anbeten kann.",
+        "role": "Worship-Leiter"
       },
       "musician": {
-        "quote": "Hier könnte ein Musiker berichten, wie das richtige Sheet im richtigen Moment hilft.",
-        "role": "Team-Musiker"
+        "quote": "Hier könnte ein Musiker berichten, wie das richtige Akkordblatt im entscheidenden Moment hilft.",
+        "role": "Musiker im Team"
       },
       "avTeam": {
-        "quote": "Hier könnte euer AV-Team erzählen, wie Lyrics und Musiker im Einklang bleiben.",
+        "quote": "Hier könnte ein Technik-Team erzählen, wie Liedtexte und Musiker zuverlässig synchron bleiben.",
         "role": "AV-Team"
       }
     }
@@ -274,135 +279,135 @@
   "features": {
     "eyebrow": "Was uns leitet",
     "title": "Die Kernprinzipien",
-    "description": "Diese Überzeugungen prägen jede Funktion — damit das Team im Takt bleibt und der Raum anbeten kann.",
+    "description": "Diese Überzeugungen prägen jede Funktion – damit dein Team synchron bleibt und der Fokus auf der Anbetung liegt.",
     "singleSource": {
-      "title": "Eine Quelle der Wahrheit",
-      "summary": "Ändere einen Song oder ein Set einmal – und alle erhalten dieselbe Version.",
+      "title": "Eine verlässliche Quelle",
+      "summary": "Ändere einen Song oder ein Set einmal – und sofort sind alle auf demselben Stand.",
       "description": [
-        "Kennst du den Schmerz, wenn verschiedene Leute verschiedene Sheets haben? Wenn du das Set ändern willst, musst du zum AV-Team rennen und Folien hin- und herschieben?",
-        "Mit Worship Viewer gibt es dafür eine Lösung. Eines der Kernprinzipien heißt „Single Source of Truth“. Was heißt das? Es bedeutet, dass an einem Ort eine Instanz deines Sheets oder Sets definiert ist.",
-        "Die kann dann von allen Teammitgliedern in unterschiedlichen Formen (Sheets, Folien usw.) und auf unterschiedlichen Geräten angesehen werden. Du aktualisierst einmal, und es kommt überall an."
+        "Unterschiedliche Versionen desselben Songs sorgen schnell für Verwirrung. Eine spontane Änderung sollte nicht bedeuten, neue Akkordblätter und Folien im ganzen Team verteilen zu müssen.",
+        "Worship Viewer verwaltet für jeden Song und jedes Set eine einzige, verbindliche Version.",
+        "Jedes Teammitglied sieht diese Quelle in der passenden Form – als Akkordblatt, Folie oder andere Ansicht und auf dem eigenen Gerät. Du änderst etwas einmal, und alle erhalten die Aktualisierung."
       ]
     },
     "preparedYetFree": {
-      "title": "Vorbereitet und dennoch frei",
+      "title": "Gut vorbereitet und trotzdem frei",
       "summary": "Plane jedes Detail, ohne dein Team in einen starren Ablauf zu zwingen.",
       "description": [
-        "Kennst du den Schmerz, Professionalität durch Unflexibilität zu erreichen? Dass du entweder alles bis ins kleinste Detail planst und jeder weiß, was er wann zu tun hat – oder dass alles völlig frei ist?",
-        "Es gibt viel gute professionelle Software, die dir hilft, den Gottesdienst professionell zu gestalten. Oft verlierst du dabei aber die Freiheit, spontan zu sein und dich vom Geist führen zu lassen.",
-        "Mit Worship Viewer gibt es dafür eine Lösung. Die App lässt dich alles planen und trotzdem an jedem Punkt ausbrechen – mit der Flexibilität, die du brauchst, ohne die Professionalität zu verlieren."
+        "Worship-Teams müssen sich oft scheinbar zwischen sorgfältiger Vorbereitung und völliger Spontaneität entscheiden.",
+        "Viele professionelle Werkzeuge helfen dabei, einen Gottesdienst präzise zu planen. Doch ein starrer Ablauf kann es schwer machen, im Moment frei zu reagieren.",
+        "Mit Worship Viewer bereitest du alle Details vor und hältst das Set trotzdem flexibel. So kann dein Team jederzeit die Richtung ändern, ohne den Überblick zu verlieren."
       ]
     },
     "allForHisGlory": {
       "title": "Alles zu Seiner Ehre",
-      "summary": "Technik steht nicht im Mittelpunkt der Anbetung, sondern dient still dem, der es tut.",
+      "summary": "Technik steht nicht im Mittelpunkt der Anbetung. Sie soll unaufdringlich dem dienen, um den es geht.",
       "description": [
         "„Denn von ihm und durch ihn und zu ihm hin sind alle Dinge. Ihm sei Ehre in Ewigkeit! Amen.“ — Römer 11,36",
-        "Das gilt für alles – und damit auch für diese App. Ihr Zweck ist nicht, Gewinn zu machen, nicht, ein cooles Tool zu sein, nicht, gute Musik zu machen. Ihr einziger Zweck ist, Gott zu verherrlichen.",
-        "Es ist Sein Projekt, und sowohl die Nutzung als auch die Entwicklung sollen Anbetung des einen und einzigen Gottes sein – des Vaters, des Sohnes und des Heiligen Geistes."
+        "Das gilt für alles – auch für diese App. Es geht nicht um Gewinn, Neuheit oder musikalische Perfektion um ihrer selbst willen. Es geht darum, Gott zu verherrlichen.",
+        "Es ist sein Projekt. Sowohl die Entwicklung als auch die Nutzung sollen Anbetung des einen Gottes sein – des Vaters, des Sohnes und des Heiligen Geistes."
       ]
     }
   },
   "story": {
-    "eyebrow": "So funktioniert's",
-    "title": "Die Geschichte hinter Worship Viewer",
-    "description": "Starte mit einem kostenlosen Konto auf jedem Gerät, erstelle einen Song einmal und nutze ihn überall.",
-    "hint": "Bewege den Zeiger über einen Schritt oder tippe ihn an",
-    "screenshotSoon": "Screenshot folgt",
+    "eyebrow": "So funktioniert’s",
+    "title": "Ein Song – alles, was dein Team braucht",
+    "description": "Kostenloses Konto anlegen, einen Song einmal erfassen und überall im Team nutzen.",
+    "hint": "Fahre mit der Maus über einen Schritt oder tippe ihn an",
+    "screenshotSoon": "Screenshot folgt in Kürze",
     "expandScreenshot": "Screenshot größer anzeigen",
     "closeScreenshot": "Screenshot schließen",
     "tutorialLink": "Mehr erfahren",
     "nodes": {
       "createAccount": {
-        "label": "Anmelden und kostenloses Konto anlegen",
-        "description": "In Minuten registriert — Worship Viewer ist kostenlos, du kannst noch am selben Tag Songs bauen.",
-        "alt": "Worship-Viewer-Anmeldebildschirm mit E-Mail-Code und Google-Login"
+        "label": "Kostenloses Konto erstellen",
+        "description": "Die Registrierung dauert nur wenige Minuten. Danach kannst du direkt deinen ersten Song anlegen.",
+        "alt": "Anmeldung bei Worship Viewer per E-Mail-Code oder Google"
       },
       "ios": {
         "label": "iOS",
-        "description": "Nutze Worship Viewer auf iPhone und iPad — mit denselben Songs und Sets wie überall sonst.",
+        "description": "Nutze Worship Viewer auf iPhone und iPad – mit denselben Songs und Sets wie auf allen anderen Geräten.",
         "alt": "Worship Viewer auf iOS"
       },
       "android": {
         "label": "Android",
-        "description": "Dieselben Charts und Sets auf Android-Handys und -Tablets.",
+        "description": "Greife auch auf Android-Smartphones und -Tablets auf dieselben Songs und Sets zu.",
         "alt": "Worship Viewer auf Android"
       },
       "web": {
         "label": "Web",
-        "description": "Öffne es im Browser auf jedem Computer — ohne Installation.",
+        "description": "Nutze Worship Viewer auf jedem Computer direkt im Browser – ganz ohne Installation.",
         "alt": "Worship Viewer im Browser"
       },
       "importSong": {
-        "label": "Ersten Song erstellen / importieren",
-        "description": "Hole einen Song aus ChordPro oder Ultimate Guitar oder schreibe ihn von Grund auf. Dieser eine Chart ist die Quelle für jede weitere Ausgabe.",
-        "alt": "Song-Editor mit ChordPro-Quelle rechts und Live-Sheet-Vorschau links"
+        "label": "Ersten Song erstellen oder importieren",
+        "description": "Importiere einen Song aus ChordPro oder Ultimate Guitar oder erstelle ihn selbst. Dieses eine Akkordblatt ist die Grundlage für alle weiteren Ansichten.",
+        "alt": "Song-Editor mit ChordPro-Quelle und Live-Vorschau des Akkordblatts"
       },
       "sheets": {
-        "label": "Sheets anzeigen",
-        "description": "Zeige Charts auf jedem Ständer in jeder Tonart — jeder Musiker sieht den Teil, den er braucht, ohne extra Dateien.",
-        "alt": "Live-Sheet-Ansicht mit formatiertem Chord-Chart für den gewählten Song"
+        "label": "Akkordblätter anzeigen",
+        "description": "Zeige jedem Musiker das passende Akkordblatt in der richtigen Tonart – ohne zusätzliche Dateien.",
+        "alt": "Formatiertes Akkordblatt des ausgewählten Songs"
       },
       "slides": {
-        "label": "Folien anzeigen",
-        "description": "Erzeuge Lyric-Folien aus demselben Song, damit der Raum mitsingen kann, ohne ein zweites Deck zu pflegen.",
-        "alt": "Lyric-Folien, erzeugt aus dem Song"
+        "label": "Lyrics als Folien anzeigen",
+        "description": "Erzeuge Liedtext-Folien aus demselben Song, ohne parallel eine separate Präsentation pflegen zu müssen.",
+        "alt": "Aus dem Song erzeugte Liedtext-Folien"
       },
       "clicks": {
-        "label": "Click, Cue & Pad automatisch erzeugen",
-        "description": "Hör einen Click, gesprochene Cues und Pads aus dem Chart — die Band rastet ein, ohne eine separate Session.",
-        "alt": "Click-, Cue- und Pad-Sampling aus dem Song"
+        "label": "Click, Cues und Pad automatisch erzeugen",
+        "description": "Erzeuge Click, gesprochene Cues und Pads direkt aus dem Song – ganz ohne separate Playback-Session.",
+        "alt": "Automatisch erzeugte Clicks, Cues und Pads"
       },
       "pdfs": {
         "label": "PDFs exportieren",
-        "description": "Drucke oder teile ein PDF des Charts, wenn jemand Papier braucht — ohne den Song neu zu bauen.",
-        "alt": "Exportiertes PDF-Chart von The Power Of Devotion"
+        "description": "Exportiere das Akkordblatt als PDF, wenn jemand es ausdrucken oder außerhalb der App teilen möchte.",
+        "alt": "Als PDF exportiertes Akkordblatt"
       },
       "planSets": {
         "label": "Sets planen",
-        "description": "Baue den Ablauf aus denselben Songs — ordne um, wiederhole, oder lass Raum, dem Geist zu folgen.",
-        "alt": "Setlisten-Planer aus deinen Songs"
+        "description": "Stelle den Ablauf aus deinen Songs zusammen, ändere die Reihenfolge oder schaffe bewusst Raum für spontane Entscheidungen.",
+        "alt": "Setlisten-Planer mit ausgewählten Songs"
       },
       "shareTeam": {
         "label": "Mit dem Team teilen",
-        "description": "Lade die Band in ein gemeinsames Set ein, damit jeder dieselben Songs, Tonarten und Änderungen sieht.",
-        "alt": "Team-Freigabe für ein Worship-Set"
+        "description": "Lade dein Team in ein gemeinsames Set ein, damit alle dieselben Songs, Tonarten und Änderungen sehen.",
+        "alt": "Freigabe eines Worship-Sets für das Team"
       },
       "liveSessions": {
-        "label": "Gemeinsam live anbeten",
-        "description": "Geh mit dem Raum live — Charts, Folien und Cues bleiben im Takt, während du leitest.",
-        "alt": "Live-Worship-Session mit dem Team"
+        "label": "Gemeinsam in einer Live-Session spielen",
+        "description": "Starte eine Live-Session: Akkordblätter, Folien und Cues bleiben synchron, während ihr gemeinsam leitet.",
+        "alt": "Gemeinsame Live-Session eines Worship-Teams"
       },
       "digitalMd": {
-        "label": "Das Set mit dem digitalen MD leiten",
-        "description": "Der digitale MD hält die Band im Arrangement — Cues, Übergänge und den nächsten Song — damit du beim Raum bleiben kannst.",
-        "alt": "Digitaler MD leitet durch ein Worship-Set"
+        "label": "Mit dem digitalen MD durchs Set führen",
+        "description": "Der digitale MD führt die Band durch Arrangement, Cues, Übergänge und den nächsten Song – damit du dich auf den Raum konzentrieren kannst.",
+        "alt": "Digitaler MD führt durch ein Worship-Set"
       }
     }
   },
   "support": {
-    "eyebrow": "Wie du unterstützen kannst",
-    "title": "Mach mit bei der Mission, Worshippern zu dienen",
-    "description": "Engagiere dich, wie Gott es dir auflegt, damit Worship Viewer jedes Team weiter auf Seine Gegenwart ausrichtet.",
+    "eyebrow": "So kannst du helfen",
+    "title": "Hilf mit, Worship-Teams zu dienen",
+    "description": "Bring dich so ein, wie Gott es dir aufs Herz legt – damit Worship Viewer Teams hilft, den Fokus auf seine Gegenwart zu richten.",
     "praying": {
       "title": "Beten",
-      "description": "Bitte den Herrn um Versorgung, leite die Vision, bewahre sie für Seinen Ruhm und mache jeden Worshipper, der sie nutzt, zu einem Segen für seine Gemeinde."
+      "description": "Bete darum, dass der Herr für das Projekt sorgt, die Vision führt, alles zu seiner Ehre bewahrt und die Nutzer zum Segen für ihre Gemeinden macht."
     },
     "feedback": {
       "title": "Feedback & Ideen",
-      "description": "Teile jederzeit Erfahrungsberichte, Feature-Wünsche oder Fehlermeldungen unter <1>info@worshipviewer.com</1>."
+      "description": "Teile Erfahrungen, Funktionswünsche oder Fehlermeldungen jederzeit unter <1>info@worshipviewer.com</1>."
     },
     "contributing": {
       "title": "Mitwirken",
-      "description": "Bring dich in Design, Code oder Docs ein – offen auf <1>GitHub</1>."
+      "description": "Hilf bei Design, Entwicklung oder Dokumentation mit – die Zusammenarbeit läuft offen über <1>GitHub</1>."
     },
     "spreadTheWord": {
       "title": "Weitersagen",
-      "description": "Wenn Worship Viewer dir dient, lade andere Worship-Teams ein, damit die Community organisch wächst."
+      "description": "Wenn Worship Viewer deinem Team hilft, erzähle anderen Worship-Teams davon und lass die Community auf natürliche Weise wachsen."
     },
     "financial": {
       "title": "Finanzielle Unterstützung",
-      "description": "Es gibt noch keinen offiziellen Spendenkanal, aber wenn Gott es dir auflegt zu geben, schreib an <1>info@worshipviewer.com</1>."
+      "description": "Noch gibt es keinen offiziellen Spendenweg. Wenn du das Projekt finanziell unterstützen möchtest, schreib an <1>info@worshipviewer.com</1>."
     }
   },
   "footer": {
