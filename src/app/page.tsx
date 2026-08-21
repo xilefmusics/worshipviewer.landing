@@ -1,30 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
+import { FeatureCards } from "@/components/feature-cards";
 import { StoryDiagram } from "@/components/story-diagram";
+import { SupportCards } from "@/components/support-cards";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-const featureKeys = [
-  "singleSource",
-  "preparedYetFree",
-  "allForHisGlory",
-] as const;
-
-const supportKeys = [
-  "praying",
-  "feedback",
-  "contributing",
-  "spreadTheWord",
-  "financial",
-] as const;
 
 export default function Home() {
   const { t } = useTranslation();
@@ -53,78 +35,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-3">
-        {featureKeys.map((key) => (
-          <Card key={key}>
-            <CardHeader>
-              <CardTitle className="text-xl">
-                {t(`features.${key}.title`)}
-              </CardTitle>
-              <CardDescription>
-                {t(`features.${key}.description`)}
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        ))}
-      </section>
+      <FeatureCards />
 
       <StoryDiagram />
 
-      <section className="space-y-6">
-        <div className="space-y-2 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-foreground)] sm:text-[0.8125rem]">
-            {t("support.eyebrow")}
-          </p>
-          <h2 className="text-balance text-3xl font-semibold">
-            {t("support.title")}
-          </h2>
-          <p className="text-base text-[var(--color-muted-foreground)]">
-            {t("support.description")}
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {supportKeys.map((key) => (
-            <Card key={key}>
-              <CardHeader>
-                <CardTitle className="text-xl">
-                  {t(`support.${key}.title`)}
-                </CardTitle>
-                <CardDescription>
-                  {key === "feedback" || key === "financial" ? (
-                    <Trans
-                      i18nKey={`support.${key}.description`}
-                      components={{
-                        1: (
-                          <Link
-                            href="mailto:info@worshipviewer.com"
-                            className="underline underline-offset-2 hover:text-[var(--color-foreground)]"
-                          />
-                        ),
-                      }}
-                    />
-                  ) : key === "contributing" ? (
-                    <Trans
-                      i18nKey={`support.${key}.description`}
-                      components={{
-                        1: (
-                          <Link
-                            href="https://github.com/xilefmusics/worship_viewer"
-                            className="underline underline-offset-2 hover:text-[var(--color-foreground)]"
-                            target="_blank"
-                            rel="noreferrer"
-                          />
-                        ),
-                      }}
-                    />
-                  ) : (
-                    t(`support.${key}.description`)
-                  )}
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </section>
+      <SupportCards />
     </main>
   );
 }

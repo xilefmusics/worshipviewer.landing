@@ -9,19 +9,24 @@ import {
   Globe,
   ListMusic,
   LogIn,
+  Maximize2,
   Presentation,
   Radio,
   Smartphone,
   Sparkles,
   TabletSmartphone,
   Users,
+  X,
   type LucideIcon,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
 import { ComingSoonLabel } from "@/components/coming-soon-label";
+import { usePrefersHover } from "@/lib/use-prefers-hover";
 import { cn } from "@/lib/utils";
 
 /**
@@ -32,53 +37,43 @@ export type StoryNode = {
   id: string;
   icon: LucideIcon;
   image?: string;
+  hideScreenshot?: boolean;
   comingSoon?: boolean;
   wide?: boolean;
 };
 
 export const storyLayers: StoryNode[][] = [
-  [{ id: "createAccount", icon: LogIn, wide: true }],
+  [{ id: "createAccount", icon: LogIn, wide: true, image: "/wv_login.png" }],
   [
-    { id: "ios", icon: Smartphone },
-    { id: "android", icon: TabletSmartphone },
-    { id: "web", icon: Globe },
+    { id: "ios", icon: Smartphone, hideScreenshot: true },
+    { id: "android", icon: TabletSmartphone, hideScreenshot: true },
+    { id: "web", icon: Globe, hideScreenshot: true },
   ],
-  [{ id: "importSong", icon: FilePlus, image: "/screenshot2.png", wide: true }],
+  [{ id: "importSong", icon: FilePlus, image: "/wv_edit2.png", wide: true }],
   [
-    { id: "sheets", icon: FileMusic, image: "/screenshot1.png" },
-    { id: "slides", icon: Presentation, comingSoon: true },
+    { id: "sheets", icon: FileMusic, image: "/wv_sheet.png" },
+    { id: "slides", icon: Presentation, image: "/wv_slide.png" },
     { id: "clicks", icon: AudioLines, comingSoon: true },
-    { id: "pdfs", icon: FileDown, comingSoon: true },
-    { id: "planSets", icon: ListMusic, comingSoon: true },
-    { id: "shareTeam", icon: Users, comingSoon: true },
-    { id: "liveSessions", icon: Radio, comingSoon: true },
+    { id: "pdfs", icon: FileDown, image: "/wv_pdf.png" },
+    { id: "planSets", icon: ListMusic, image: "/wv_edit.png" },
+    { id: "shareTeam", icon: Users, image: "/wv_team.png" },
+    { id: "liveSessions", icon: Radio, image: "/wv_session.png" },
     { id: "digitalMd", icon: Sparkles, comingSoon: true },
   ],
 ];
+
+type LightboxImage = {
+  src: string;
+  alt: string;
+};
 
 type StoryDiagramState = {
   openId: string | null;
   prefersHover: boolean;
   onToggle: (id: string) => void;
   onHover: (id: string | null) => void;
+  onOpenLightbox: (image: LightboxImage) => void;
 };
-
-function usePrefersHover() {
-  const [prefersHover, setPrefersHover] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(
-      "(hover: hover) and (pointer: fine)",
-    );
-    const update = () => setPrefersHover(mediaQuery.matches);
-
-    update();
-    mediaQuery.addEventListener("change", update);
-    return () => mediaQuery.removeEventListener("change", update);
-  }, []);
-
-  return prefersHover;
-}
 
 function layerListClass(count: number) {
   if (count === 1) {
@@ -174,6 +169,7 @@ function StoryNodeCard({
   prefersHover,
   onToggle,
   onHover,
+  onOpenLightbox,
 }: {
   node: StoryNode;
 } & StoryDiagramState) {
@@ -182,6 +178,7 @@ function StoryNodeCard({
   const Icon = node.icon;
   const open = openId === node.id;
   const label = t(`story.nodes.${node.id}.label`);
+  const imageAlt = t(`story.nodes.${node.id}.alt`);
 
   return (
     <article
@@ -250,19 +247,37 @@ function StoryNodeCard({
             <p className="text-sm text-[var(--color-muted-foreground)]">
               {t(`story.nodes.${node.id}.description`)}
             </p>
-            {node.image ? (
-              <Image
-                src={node.image}
-                alt={t(`story.nodes.${node.id}.alt`)}
-                width={960}
-                height={640}
-                className="h-auto w-full rounded-lg border border-[var(--color-border)] object-cover"
-              />
+            {node.hideScreenshot ? null : node.image ? (
+              <button
+                type="button"
+                onClick={() => {
+                  onOpenLightbox({ src: node.image!, alt: imageAlt });
+                }}
+                aria-label={t("story.expandScreenshot")}
+                className="group relative block w-full cursor-pointer rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+              >
+                <Image
+                  src={node.image}
+                  alt={imageAlt}
+                  width={960}
+                  height={640}
+                  className="h-auto w-full rounded-lg border border-[var(--color-border)] object-contain transition-[opacity,border-color] group-hover:border-[var(--color-primary)] group-hover:opacity-90"
+                />
+                <span className="absolute bottom-2 right-2 flex size-8 items-center justify-center rounded-md border border-[var(--color-border)] bg-[var(--color-surface)]/90 text-[var(--color-foreground)] shadow-sm transition-colors group-hover:border-[var(--color-primary)] group-hover:text-[var(--color-primary)]">
+                  <Maximize2 className="size-4" aria-hidden />
+                </span>
+              </button>
             ) : (
               <div className="flex aspect-video items-center justify-center rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-muted)]/40 px-3 text-center text-xs text-[var(--color-muted-foreground)]">
                 {t("story.screenshotSoon")}
               </div>
             )}
+            <Link
+              href={`/tutorials/getting-started#${node.id}`}
+              className="inline-block text-sm font-medium text-[var(--color-primary)] underline-offset-2 hover:underline"
+            >
+              {t("story.tutorialLink")}
+            </Link>
           </div>
         </div>
       </div>
@@ -291,11 +306,61 @@ function StoryLayer({
   );
 }
 
+function ScreenshotLightbox({
+  image,
+  onClose,
+}: {
+  image: LightboxImage;
+  onClose: () => void;
+}) {
+  const { t } = useTranslation();
+  const closeLabel = t("story.closeScreenshot");
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={image.alt}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 sm:p-8"
+      onClick={onClose}
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label={closeLabel}
+        className="absolute right-4 top-4 flex size-10 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-foreground)] shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+      >
+        <X className="size-5" aria-hidden />
+      </button>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={2064}
+        height={2752}
+        className="max-h-[90vh] w-auto max-w-[min(90vw,56rem)] rounded-lg object-contain"
+        onClick={(event) => event.stopPropagation()}
+        priority
+      />
+    </div>,
+    document.body,
+  );
+}
+
 export function StoryDiagram() {
   const { t } = useTranslation();
   const prefersHover = usePrefersHover();
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<LightboxImage | null>(null);
   const [paths, setPaths] = useState<string[]>([]);
   const diagramRef = useRef<HTMLDivElement>(null);
   const openId = (prefersHover ? hoveredId : null) ?? expandedId;
@@ -306,15 +371,22 @@ export function StoryDiagram() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setExpandedId(null);
-        setHoveredId(null);
+      if (event.key !== "Escape") {
+        return;
       }
+
+      if (lightbox) {
+        setLightbox(null);
+        return;
+      }
+
+      setExpandedId(null);
+      setHoveredId(null);
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [lightbox]);
 
   useLayoutEffect(() => {
     const root = diagramRef.current;
@@ -346,6 +418,7 @@ export function StoryDiagram() {
     prefersHover,
     onToggle,
     onHover: setHoveredId,
+    onOpenLightbox: setLightbox,
   };
 
   return (
@@ -393,6 +466,9 @@ export function StoryDiagram() {
           {t("story.hint")}
         </p>
       </div>
+      {lightbox ? (
+        <ScreenshotLightbox image={lightbox} onClose={() => setLightbox(null)} />
+      ) : null}
     </section>
   );
 }

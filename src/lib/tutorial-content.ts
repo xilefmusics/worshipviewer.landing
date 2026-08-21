@@ -199,14 +199,20 @@ export function getChapterForSection(
 }
 
 export function tutorialEntriesFromLegacySections(
-  sections: Array<{ heading: string; body: string }>,
+  sections: Array<{
+    id?: string;
+    heading: string;
+    body: string;
+    comingSoon?: boolean;
+  }>,
 ): TutorialEntry[] {
   return sections.flatMap((section, index) => [
     {
       type: "heading" as const,
-      id: `section-${index}`,
+      id: section.id ?? `section-${index}`,
       text: section.heading,
       level: 2 as const,
+      comingSoon: section.comingSoon,
     },
     { type: "paragraph" as const, text: section.body },
   ]);

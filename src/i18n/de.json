@@ -164,16 +164,78 @@
         "excerpt": "Erstelle deinen ersten Song, baue ein Set und starte in unter zehn Minuten live.",
         "sections": [
           {
-            "heading": "Konto anlegen",
+            "id": "createAccount",
+            "heading": "Anmelden und kostenloses Konto anlegen",
             "body": "Geh in die App und melde dich mit deiner E-Mail an. Lege danach ein Team an oder tritt einem bei, damit Charts und Sets für alle synchron bleiben."
           },
           {
-            "heading": "Deinen ersten Song hinzufügen",
+            "id": "ios",
+            "heading": "iOS",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Worship Viewer auf iPhone und iPad folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "android",
+            "heading": "Android",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Worship Viewer auf Android folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "web",
+            "heading": "Web",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Worship Viewer im Browser folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "importSong",
+            "heading": "Ersten Song erstellen / importieren",
             "body": "Importiere aus ChordPro oder Ultimate Guitar oder erstelle ein Chart von Grund auf. Wähle die Tonart, füge Abschnitte hinzu — Worship Viewer hält jeden Part im Takt."
           },
           {
-            "heading": "Set bauen und live gehen",
-            "body": "Ziehe Songs in eine Setliste, sortiere sie und öffne die Live-Ansicht, wenn der Gottesdienst beginnt. Jeder Musiker sieht den Chart, den er braucht — du bleibst im Raum präsent."
+            "id": "sheets",
+            "heading": "Sheets anzeigen",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Charts auf jedem Ständer folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "slides",
+            "heading": "Folien anzeigen",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Lyric-Folien folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "clicks",
+            "heading": "Click, Cue & Pad automatisch erzeugen",
+            "body": "Eine Schritt-für-Schritt-Anleitung für Click, Cue und Pad folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "pdfs",
+            "heading": "PDFs exportieren",
+            "body": "Eine Schritt-für-Schritt-Anleitung für den PDF-Export folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "planSets",
+            "heading": "Sets planen",
+            "body": "Ziehe Songs in eine Setliste, sortiere sie und lass Raum, dem Geist zu folgen."
+          },
+          {
+            "id": "shareTeam",
+            "heading": "Mit dem Team teilen",
+            "body": "Eine Schritt-für-Schritt-Anleitung zum Einladen der Band folgt in Kürze.",
+            "comingSoon": true
+          },
+          {
+            "id": "liveSessions",
+            "heading": "Gemeinsam live anbeten",
+            "body": "Öffne die Live-Ansicht, wenn der Gottesdienst beginnt. Jeder Musiker sieht den Chart, den er braucht — du bleibst im Raum präsent."
+          },
+          {
+            "id": "digitalMd",
+            "heading": "Das Set mit dem digitalen MD leiten",
+            "body": "Eine Schritt-für-Schritt-Anleitung für den digitalen MD folgt in Kürze.",
+            "comingSoon": true
           }
         ]
       }
@@ -186,17 +248,32 @@
     "joinFree": "Jetzt kostenlos mitmachen"
   },
   "features": {
+    "eyebrow": "Was uns leitet",
+    "title": "Die Kernprinzipien",
+    "description": "Diese Überzeugungen prägen jede Funktion — damit das Team im Takt bleibt und der Raum anbeten kann.",
     "singleSource": {
       "title": "Eine Quelle der Wahrheit",
-      "description": "Erstelle einen Song einmal und vertraue darauf, dass Charts, Folien, Clicks, Cues und jedes Teammitglied perfekt synchron bleiben."
+      "description": [
+        "Kennst du den Schmerz, wenn verschiedene Leute verschiedene Sheets haben? Wenn du das Set ändern willst, musst du zum AV-Team rennen und Folien hin- und herschieben?",
+        "Mit Worship Viewer gibt es dafür eine Lösung. Eines der Kernprinzipien heißt „Single Source of Truth“. Was heißt das? Es bedeutet, dass an einem Ort eine Instanz deines Sheets oder Sets definiert ist.",
+        "Die kann dann von allen Teammitgliedern in unterschiedlichen Formen (Sheets, Folien usw.) und auf unterschiedlichen Geräten angesehen werden. Du aktualisierst einmal, und es kommt überall an."
+      ]
     },
     "preparedYetFree": {
       "title": "Vorbereitet und dennoch frei",
-      "description": "Plane Sets bis ins Detail, brich aber aus, sobald der Geist führt – starte auch spontanen Worship, ohne den Halt zu verlieren."
+      "description": [
+        "Kennst du den Schmerz, Professionalität durch Unflexibilität zu erreichen? Dass du entweder alles bis ins kleinste Detail planst und jeder weiß, was er wann zu tun hat – oder dass alles völlig frei ist?",
+        "Es gibt viel gute professionelle Software, die dir hilft, den Gottesdienst professionell zu gestalten. Oft verlierst du dabei aber die Freiheit, spontan zu sein und dich vom Geist führen zu lassen.",
+        "Mit Worship Viewer gibt es dafür eine Lösung. Die App lässt dich alles planen und trotzdem an jedem Punkt ausbrechen – mit der Flexibilität, die du brauchst, ohne die Professionalität zu verlieren."
+      ]
     },
     "allForHisGlory": {
       "title": "Alles zu Seiner Ehre",
-      "description": "Der ganze Sinn dieser App ist es, den einen wahren Gott anzubeten und zu verherrlichen – Vater, Sohn und Heiliger Geist."
+      "description": [
+        "„Denn von ihm und durch ihn und zu ihm hin sind alle Dinge. Ihm sei Ehre in Ewigkeit! Amen.“ — Römer 11,36",
+        "Das gilt für alles – und damit auch für diese App. Ihr Zweck ist nicht, Gewinn zu machen, nicht, ein cooles Tool zu sein, nicht, gute Musik zu machen. Ihr einziger Zweck ist, Gott zu verherrlichen.",
+        "Es ist Sein Projekt, und sowohl die Nutzung als auch die Entwicklung sollen Anbetung des einen und einzigen Gottes sein – des Vaters, des Sohnes und des Heiligen Geistes."
+      ]
     }
   },
   "story": {
@@ -205,11 +282,14 @@
     "description": "Starte mit einem kostenlosen Konto auf jedem Gerät, erstelle einen Song einmal und nutze ihn überall.",
     "hint": "Bewege den Zeiger über einen Schritt oder tippe ihn an",
     "screenshotSoon": "Screenshot folgt",
+    "expandScreenshot": "Screenshot größer anzeigen",
+    "closeScreenshot": "Screenshot schließen",
+    "tutorialLink": "Mehr erfahren",
     "nodes": {
       "createAccount": {
         "label": "Anmelden und kostenloses Konto anlegen",
         "description": "In Minuten registriert — Worship Viewer ist kostenlos, du kannst noch am selben Tag Songs bauen.",
-        "alt": "Kostenloses Worship-Viewer-Konto anlegen"
+        "alt": "Worship-Viewer-Anmeldebildschirm mit E-Mail-Code und Google-Login"
       },
       "ios": {
         "label": "iOS",
@@ -249,7 +329,7 @@
       "pdfs": {
         "label": "PDFs exportieren",
         "description": "Drucke oder teile ein PDF des Charts, wenn jemand Papier braucht — ohne den Song neu zu bauen.",
-        "alt": "PDF-Export des Song-Charts"
+        "alt": "Exportiertes PDF-Chart von The Power Of Devotion"
       },
       "planSets": {
         "label": "Sets planen",

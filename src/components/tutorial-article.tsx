@@ -42,7 +42,12 @@ export function TutorialArticle({ slug }: { slug: string }) {
     const legacySections = t(`tutorials.posts.${slug}.sections`, {
       returnObjects: true,
       defaultValue: [],
-    }) as Array<{ heading: string; body: string }>;
+    }) as Array<{
+      id?: string;
+      heading: string;
+      body: string;
+      comingSoon?: boolean;
+    }>;
 
     if (Array.isArray(legacySections) && legacySections.length > 0) {
       return tutorialEntriesFromLegacySections(legacySections);

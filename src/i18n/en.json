@@ -164,16 +164,78 @@
         "excerpt": "Create your first song, build a set, and go live in under ten minutes.",
         "sections": [
           {
-            "heading": "Create an account",
+            "id": "createAccount",
+            "heading": "Log in to create your free account",
             "body": "Head to the app and sign up with your email. Once you are in, create or join a team so charts and sets stay in sync for everyone."
           },
           {
-            "heading": "Add your first song",
+            "id": "ios",
+            "heading": "iOS",
+            "body": "A step-by-step guide for using Worship Viewer on iPhone and iPad is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "android",
+            "heading": "Android",
+            "body": "A step-by-step guide for using Worship Viewer on Android is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "web",
+            "heading": "Web",
+            "body": "A step-by-step guide for using Worship Viewer in the browser is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "importSong",
+            "heading": "Create / import your first song",
             "body": "Import from ChordPro or Ultimate Guitar, or build a chart from scratch. Pick the key, add sections, and Worship Viewer keeps every part aligned."
           },
           {
-            "heading": "Build a set and go live",
-            "body": "Drag songs into a set list, reorder as needed, and open the live view when worship starts. Every musician sees the chart they need — you stay focused on the room."
+            "id": "sheets",
+            "heading": "Display the sheets",
+            "body": "A step-by-step guide for putting charts on every stand is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "slides",
+            "heading": "Display the slides",
+            "body": "A step-by-step guide for lyric slides is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "clicks",
+            "heading": "Auto-sample click, cue & pad",
+            "body": "A step-by-step guide for click, cue, and pad sampling is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "pdfs",
+            "heading": "Export PDFs",
+            "body": "A step-by-step guide for exporting charts as PDFs is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "planSets",
+            "heading": "Plan your sets",
+            "body": "Drag songs into a set list, reorder as needed, and leave room to follow the Spirit."
+          },
+          {
+            "id": "shareTeam",
+            "heading": "Share with your team",
+            "body": "A step-by-step guide for inviting your band is coming soon.",
+            "comingSoon": true
+          },
+          {
+            "id": "liveSessions",
+            "heading": "Worship together in live sessions",
+            "body": "Open the live view when worship starts. Every musician sees the chart they need — you stay focused on the room."
+          },
+          {
+            "id": "digitalMd",
+            "heading": "Lead through the set using the digital MD",
+            "body": "A step-by-step guide for the digital MD is coming soon.",
+            "comingSoon": true
           }
         ]
       }
@@ -186,17 +248,32 @@
     "joinFree": "Join Now For Free"
   },
   "features": {
+    "eyebrow": "What guides us",
+    "title": "The core principles",
+    "description": "These convictions shape every feature — so the team stays in sync and the room stays in worship.",
     "singleSource": {
       "title": "Single Source of Truth",
-      "description": "Craft a song once, then trust it everywhere—charts, slides, clicks, cues, and every team member stay perfectly in sync."
+      "description": [
+        "Do you know that pain of different people having different sheets? If you want to change the set you have to run to the AV team and ping pong slides?",
+        "With Worship Viewer you have a way to solve that. One of the core principles is called “Single Source of Truth”. What does this mean? It means at one place there is one instance of your sheet or set defined.",
+        "This then can be viewed by all your team members in different forms (sheets, slides, etc.) and different kinds of devices. You update it once, it’s rolled out everywhere."
+      ]
     },
     "preparedYetFree": {
-      "title": "Prepared Yet Free",
-      "description": "Plan sets down to the beat, but break out the instant the Spirit leads—even launch fully spontaneous worship without losing footing."
+      "title": "Prepared yet Free",
+      "description": [
+        "Do you know the pain of achieving professionally through inflexibility? That you either plan everything to the smallest detail and everyone knows what he has to do when, or that everything is completely free?",
+        "There is a lot of good professional software out there, that helps you do your worship session in a professional manner, but often you lose your flexibility to be spontaneous, to be led by the spirit.",
+        "With Worship Viewer you have a way to solve that. The app lets you plan everything yet still to break out at every point to give you the flexibility you need without losing professionality."
+      ]
     },
     "allForHisGlory": {
       "title": "All for His Glory",
-      "description": "The whole purpose of this App is to worship and glorify the one true God - The Father, the Son and the Holy Spirit."
+      "description": [
+        "“For from him and through him and for him are all things. To him be the glory forever! Amen.” — Romans 11:36",
+        "That holds true for everything and therefore as well for this app. Its purpose is not to make profit, not to be a cool tool, not to make good music. Its only purpose is to glorify God.",
+        "It’s His project and using it as well as developing it should be in worship to the one and only God, the Father, the Son and the Holy Spirit."
+      ]
     }
   },
   "story": {
@@ -205,11 +282,14 @@
     "description": "Start with a free account on any device, create a song once, then use it everywhere.",
     "hint": "Hover or tap a step",
     "screenshotSoon": "Screenshot coming soon",
+    "expandScreenshot": "View larger screenshot",
+    "closeScreenshot": "Close screenshot",
+    "tutorialLink": "Learn more",
     "nodes": {
       "createAccount": {
         "label": "Log in to create your free account",
         "description": "Sign up in minutes — Worship Viewer is free to join, so you can start building songs the same day.",
-        "alt": "Create a free Worship Viewer account"
+        "alt": "Worship Viewer sign-in screen with email code and Google login"
       },
       "ios": {
         "label": "iOS",
@@ -249,7 +329,7 @@
       "pdfs": {
         "label": "Export PDFs",
         "description": "Print or share a PDF of the chart when someone still needs paper, without rebuilding the song.",
-        "alt": "PDF export of the song chart"
+        "alt": "Exported PDF chart of The Power Of Devotion"
       },
       "planSets": {
         "label": "Plan your sets",
