@@ -422,7 +422,7 @@ export function StoryDiagram() {
   };
 
   return (
-    <section className="space-y-6">
+    <section id="how-it-works" className="scroll-mt-8 space-y-6">
       <div className="space-y-2 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-muted-foreground)] sm:text-[0.8125rem]">
           {t("story.eyebrow")}

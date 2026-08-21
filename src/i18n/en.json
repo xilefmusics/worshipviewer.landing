@@ -243,9 +243,33 @@
   },
   "hero": {
     "eyebrow": "All for His glory",
-    "title": "Helps you lead worship - then steps aside when the Spirit takes over.",
+    "title": "Lead worship with confidence — and stay free to follow the Spirit.",
     "subtitle": "Focus on the room not the screen! Don't make music - worship!",
-    "joinFree": "Join Now For Free"
+    "primaryCta": "Start free",
+    "secondaryCta": "See how it works",
+    "joinFree": "Free to join. Start in your browser.",
+    "productImageAlt": "Worship Viewer displaying a synchronized chord chart and set list",
+    "productCaption": "One song. Every musician. Always in sync."
+  },
+  "socialProof": {
+    "eyebrow": "Stories from the room",
+    "title": "Built to serve real worship teams",
+    "description": "Worship Viewer is still early. These spaces are ready for honest stories from teams using it in their churches — never made-up praise.",
+    "placeholderLabel": "Testimonial placeholder",
+    "cards": {
+      "worshipLeader": {
+        "quote": "Your worship team’s experience leading with more freedom could be shared here.",
+        "role": "Worship leader"
+      },
+      "musician": {
+        "quote": "A musician’s story about receiving the right chart at the right moment could live here.",
+        "role": "Team musician"
+      },
+      "avTeam": {
+        "quote": "Your AV team’s experience keeping lyrics and musicians aligned could be featured here.",
+        "role": "AV team"
+      }
+    }
   },
   "features": {
     "eyebrow": "What guides us",
@@ -253,26 +277,29 @@
     "description": "These convictions shape every feature — so the team stays in sync and the room stays in worship.",
     "singleSource": {
       "title": "Single Source of Truth",
+      "summary": "Update a song or set once and everyone receives the same version.",
       "description": [
-        "Do you know that pain of different people having different sheets? If you want to change the set you have to run to the AV team and ping pong slides?",
-        "With Worship Viewer you have a way to solve that. One of the core principles is called “Single Source of Truth”. What does this mean? It means at one place there is one instance of your sheet or set defined.",
-        "This then can be viewed by all your team members in different forms (sheets, slides, etc.) and different kinds of devices. You update it once, it’s rolled out everywhere."
+        "Different charts create confusion. A late set change should not mean chasing musicians and sending revised slides back and forth with the AV team.",
+        "Worship Viewer keeps one definitive version of every song and set in one place.",
+        "Each team member can view that source in the format they need — sheets, slides, or another supported view — on their own device. Update it once, and the change reaches everyone."
       ]
     },
     "preparedYetFree": {
       "title": "Prepared yet Free",
+      "summary": "Plan every detail without locking your team into an inflexible performance.",
       "description": [
-        "Do you know the pain of achieving professionally through inflexibility? That you either plan everything to the smallest detail and everyone knows what he has to do when, or that everything is completely free?",
-        "There is a lot of good professional software out there, that helps you do your worship session in a professional manner, but often you lose your flexibility to be spontaneous, to be led by the spirit.",
-        "With Worship Viewer you have a way to solve that. The app lets you plan everything yet still to break out at every point to give you the flexibility you need without losing professionality."
+        "Worship teams often feel forced to choose between detailed preparation and complete spontaneity.",
+        "Many professional tools help plan a service precisely, but that structure can make it harder to respond freely in the moment.",
+        "Worship Viewer lets you prepare the details while keeping every part of the set flexible, so your team can change direction without losing clarity."
       ]
     },
     "allForHisGlory": {
       "title": "All for His Glory",
+      "summary": "Technology is not the center of worship; it should quietly serve the One who is.",
       "description": [
         "“For from him and through him and for him are all things. To him be the glory forever! Amen.” — Romans 11:36",
-        "That holds true for everything and therefore as well for this app. Its purpose is not to make profit, not to be a cool tool, not to make good music. Its only purpose is to glorify God.",
-        "It’s His project and using it as well as developing it should be in worship to the one and only God, the Father, the Son and the Holy Spirit."
+        "That is true of everything, including this app. Its purpose is not profit, novelty, or musical polish for its own sake. Its purpose is to glorify God.",
+        "It is His project. Building and using it should be an act of worship to the one God — Father, Son, and Holy Spirit."
       ]
     }
   },

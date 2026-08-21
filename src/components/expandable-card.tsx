@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 export function ExpandableCard({
   id,
   title,
+  summary,
   open,
   prefersHover,
   onToggle,
@@ -17,6 +18,7 @@ export function ExpandableCard({
 }: {
   id: string;
   title: string;
+  summary?: string;
   open: boolean;
   prefersHover: boolean;
   onToggle: (id: string) => void;
@@ -56,9 +58,16 @@ export function ExpandableCard({
         }}
         className="flex w-full items-start justify-between gap-3 rounded-md text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
       >
-        <h3 className="text-xl font-semibold leading-snug tracking-tight">
-          {title}
-        </h3>
+        <span>
+          <span className="block text-xl font-semibold leading-snug tracking-tight">
+            {title}
+          </span>
+          {summary ? (
+            <span className="mt-2 block text-sm font-normal leading-relaxed text-[var(--color-muted-foreground)]">
+              {summary}
+            </span>
+          ) : null}
+        </span>
         <ChevronDown
           className={cn(
             "mt-1 size-4 shrink-0 text-[var(--color-muted-foreground)] transition-transform duration-200",

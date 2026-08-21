@@ -42,6 +42,7 @@ export function FeatureCards() {
               key={key}
               id={key}
               title={t(`features.${key}.title`)}
+              summary={t(`features.${key}.summary`)}
               open={openId === key}
               prefersHover={prefersHover}
               onToggle={onToggle}

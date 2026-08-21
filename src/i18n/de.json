@@ -243,9 +243,33 @@
   },
   "hero": {
     "eyebrow": "Alles zu Seiner Ehre",
-    "title": "Hilft dir beim Leiten des Gottesdienstes – und tritt zurück, wenn der Geist übernimmt.",
-    "subtitle": "Fokus auf den Raum, nicht auf den Bildschirm! Nicht Musik machen – anbeten!",
-    "joinFree": "Jetzt kostenlos mitmachen"
+    "title": "Leite Worship mit Sicherheit – und bleib frei, dem Geist zu folgen.",
+    "subtitle": "Halte dein Team im Einklang, ohne den Raum aus dem Blick zu verlieren. Bereite dich gut vor, reagiere frei und konzentriere dich auf Anbetung statt auf Bildschirme.",
+    "primaryCta": "Kostenlos starten",
+    "secondaryCta": "So funktioniert’s",
+    "joinFree": "Kostenlos mitmachen. Direkt im Browser starten.",
+    "productImageAlt": "Worship Viewer mit synchronisiertem Akkord-Sheet und Setliste",
+    "productCaption": "Ein Song. Alle Musiker. Immer im Einklang."
+  },
+  "socialProof": {
+    "eyebrow": "Geschichten aus dem Raum",
+    "title": "Für echte Worship-Teams entwickelt",
+    "description": "Worship Viewer steht noch am Anfang. Diese Plätze sind für ehrliche Erfahrungen von Teams reserviert, die es in ihren Gemeinden einsetzen – ohne erfundenes Lob.",
+    "placeholderLabel": "Platzhalter für Erfahrungsbericht",
+    "cards": {
+      "worshipLeader": {
+        "quote": "Hier könnte euer Worship-Team erzählen, wie es mit mehr Freiheit leitet.",
+        "role": "Worship-Leitung"
+      },
+      "musician": {
+        "quote": "Hier könnte ein Musiker berichten, wie das richtige Sheet im richtigen Moment hilft.",
+        "role": "Team-Musiker"
+      },
+      "avTeam": {
+        "quote": "Hier könnte euer AV-Team erzählen, wie Lyrics und Musiker im Einklang bleiben.",
+        "role": "AV-Team"
+      }
+    }
   },
   "features": {
     "eyebrow": "Was uns leitet",
@@ -253,6 +277,7 @@
     "description": "Diese Überzeugungen prägen jede Funktion — damit das Team im Takt bleibt und der Raum anbeten kann.",
     "singleSource": {
       "title": "Eine Quelle der Wahrheit",
+      "summary": "Ändere einen Song oder ein Set einmal – und alle erhalten dieselbe Version.",
       "description": [
         "Kennst du den Schmerz, wenn verschiedene Leute verschiedene Sheets haben? Wenn du das Set ändern willst, musst du zum AV-Team rennen und Folien hin- und herschieben?",
         "Mit Worship Viewer gibt es dafür eine Lösung. Eines der Kernprinzipien heißt „Single Source of Truth“. Was heißt das? Es bedeutet, dass an einem Ort eine Instanz deines Sheets oder Sets definiert ist.",
@@ -261,6 +286,7 @@
     },
     "preparedYetFree": {
       "title": "Vorbereitet und dennoch frei",
+      "summary": "Plane jedes Detail, ohne dein Team in einen starren Ablauf zu zwingen.",
       "description": [
         "Kennst du den Schmerz, Professionalität durch Unflexibilität zu erreichen? Dass du entweder alles bis ins kleinste Detail planst und jeder weiß, was er wann zu tun hat – oder dass alles völlig frei ist?",
         "Es gibt viel gute professionelle Software, die dir hilft, den Gottesdienst professionell zu gestalten. Oft verlierst du dabei aber die Freiheit, spontan zu sein und dich vom Geist führen zu lassen.",
@@ -269,6 +295,7 @@
     },
     "allForHisGlory": {
       "title": "Alles zu Seiner Ehre",
+      "summary": "Technik steht nicht im Mittelpunkt der Anbetung, sondern dient still dem, der es tut.",
       "description": [
         "„Denn von ihm und durch ihn und zu ihm hin sind alle Dinge. Ihm sei Ehre in Ewigkeit! Amen.“ — Römer 11,36",
         "Das gilt für alles – und damit auch für diese App. Ihr Zweck ist nicht, Gewinn zu machen, nicht, ein cooles Tool zu sein, nicht, gute Musik zu machen. Ihr einziger Zweck ist, Gott zu verherrlichen.",
