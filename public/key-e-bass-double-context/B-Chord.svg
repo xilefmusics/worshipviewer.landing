@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="900" viewBox="-6 0 632 900" role="img" aria-labelledby="title desc">
+  <title id="title">B chord bass and double-context fingering diagram</title>
+  <desc id="desc">Chord grid starting at fret 7, with finger 1 moved to the low E string at fret 7 while muting the A string, and fingers 3 and 4 held on the D and G strings at fret 9.</desc>
+
+  <g fill="none" stroke="#0b0b0b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 40 H580" stroke-width="12"/>
+    <path d="M40 40 V860 M148 40 V860 M256 40 V860 M364 40 V860 M472 40 V860 M580 40 V860" stroke-width="12"/>
+    <path d="M40 313 H580 M40 586 H580 M40 860 H580" stroke-width="12"/>
+  </g>
+
+  <!-- Finger 1 on the low E string mutes the A string -->
+  <path d="M120 148 L176 204 M176 148 L120 204" fill="none" stroke="#d01d21" stroke-width="12" stroke-linecap="round"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">
+    <text x="310" y="28" fill="#0b0b0b" font-size="28">Fret 7</text>
+    <circle cx="310" cy="724" r="39" fill="#abb0bc"/>
+    <circle cx="40" cy="176" r="39" fill="#d01d21"/><text x="40" y="188" fill="#fff">1</text>
+    <circle cx="256" cy="724" r="39" fill="#d01d21"/><text x="256" y="736" fill="#fff">3</text>
+    <circle cx="364" cy="724" r="39" fill="#d01d21"/><text x="364" y="736" fill="#fff">4</text>
+  </g>
+</svg>

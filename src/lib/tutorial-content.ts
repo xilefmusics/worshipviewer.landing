@@ -11,6 +11,7 @@ export type TutorialHeading = {
 export type TutorialParagraph = {
   type: "paragraph";
   text: string;
+  separate?: boolean;
 };
 
 export type TutorialTable = {
@@ -38,7 +39,9 @@ export type TutorialImage = {
   type: "image";
   src: string;
   alt: string;
+  title?: string;
   width?: "full" | "half";
+  maxFret?: number;
 };
 
 export type TutorialAudio = {
@@ -81,6 +84,13 @@ export type TutorialCircleOfFifthsSimulator = {
   type: "circle-of-fifths-simulator";
 };
 
+export type TutorialFoldable = {
+  type: "foldable";
+  title: string;
+  label?: string;
+  entries: TutorialEntry[];
+};
+
 export type TutorialEntry =
   | TutorialHeading
   | TutorialParagraph
@@ -94,7 +104,8 @@ export type TutorialEntry =
   | TutorialIntervalSimulator
   | TutorialCircleOfFifthsSimulator
   | TutorialMajorMinorPlayer
-  | TutorialChordExamplesPlayer;
+  | TutorialChordExamplesPlayer
+  | TutorialFoldable;
 
 export type TutorialTocItem = {
   id: string;
@@ -134,11 +145,29 @@ export function normalizeTutorialEntries(
 
   for (const entry of entries) {
     if (entry.type === "paragraph") {
+      if (entry.separate) {
+        flushParagraphs();
+        normalized.push({
+          type: "paragraph",
+          text: entry.text,
+        });
+        continue;
+      }
+
       paragraphBuffer.push(entry.text);
       continue;
     }
 
     flushParagraphs();
+
+    if (entry.type === "foldable") {
+      normalized.push({
+        ...entry,
+        entries: normalizeTutorialEntries(entry.entries),
+      });
+      continue;
+    }
+
     normalized.push(entry);
   }
 

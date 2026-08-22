@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 import { ChordExamplesPlayer } from "@/components/chord-examples-player";
@@ -5,12 +6,18 @@ import { ChordPlayer } from "@/components/chord-player";
 import { ChordStaff } from "@/components/chord-staff";
 import { CircleOfFifthsSimulator } from "@/components/circle-of-fifths-simulator";
 import { ComingSoonLabel } from "@/components/coming-soon-label";
+import { InProgressLabel } from "@/components/in-progress-label";
 import { HarmonicSimulator } from "@/components/harmonic-simulator";
 import { MajorMinorPlayer } from "@/components/major-minor-player";
 import { IntervalSimulator } from "@/components/interval-simulator";
 import { ScaleSimulator } from "@/components/scale-simulator";
 import { ToneSimulator } from "@/components/tone-simulator";
-import type { TutorialEntry } from "@/lib/tutorial-content";
+import {
+  TutorialExpandableImage,
+  TutorialExpandableTrigger,
+} from "@/components/tutorial-expandable-image";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import type { TutorialEntry, TutorialImage } from "@/lib/tutorial-content";
 import { cn } from "@/lib/utils";
 
 function renderInlineText(text: string) {
@@ -32,10 +39,116 @@ function renderInlineText(text: string) {
   });
 }
 
+function isTitledImage(
+  entry: TutorialEntry,
+): entry is TutorialImage & { title: string } {
+  return entry.type === "image" && Boolean(entry.title);
+}
+
+type TutorialBlock =
+  | { type: "titled-images"; entries: TutorialImage[]; startIndex: number }
+  | { type: "single"; entry: TutorialEntry; index: number };
+
+function groupTutorialEntries(entries: TutorialEntry[]): TutorialBlock[] {
+  const blocks: TutorialBlock[] = [];
+
+  for (let index = 0; index < entries.length; index += 1) {
+    const entry = entries[index];
+
+    if (isTitledImage(entry)) {
+      const titledImages: TutorialImage[] = [entry];
+      const startIndex = index;
+
+      while (index + 1 < entries.length && isTitledImage(entries[index + 1])) {
+        index += 1;
+        titledImages.push(entries[index] as TutorialImage);
+      }
+
+      blocks.push({
+        type: "titled-images",
+        entries: titledImages,
+        startIndex,
+      });
+      continue;
+    }
+
+    blocks.push({ type: "single", entry, index });
+  }
+
+  return blocks;
+}
+
+function ChordImageCard({ entry }: { entry: TutorialImage }) {
+  return (
+    <Card className="border-neutral-200 bg-white text-neutral-900 shadow-none">
+      <CardHeader className="p-2 pb-1 sm:p-3 sm:pb-2">
+        <p className="text-center text-sm font-semibold sm:text-base">
+          {entry.title}
+        </p>
+      </CardHeader>
+      <CardContent className="p-2 pt-0 sm:p-3 sm:pt-0">
+        <TutorialExpandableTrigger src={entry.src} alt={entry.alt}>
+          <Image
+            src={entry.src}
+            alt={entry.alt}
+            width={632}
+            height={900}
+            className="h-auto w-full"
+          />
+        </TutorialExpandableTrigger>
+      </CardContent>
+    </Card>
+  );
+}
+
 export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] }) {
+  const blocks = groupTutorialEntries(entries);
+
   return (
     <div className="space-y-6">
-      {entries.map((entry, index) => {
+      {blocks.map((block) => {
+        if (block.type === "titled-images") {
+          return (
+            <div key={`image-grid-${block.startIndex}`} className="@container">
+              <div className="grid grid-cols-2 gap-3 @min-[30rem]:grid-cols-3 @min-[54rem]:grid-cols-6">
+                {block.entries.map((entry, offset) => (
+                  <ChordImageCard
+                    key={`image-${block.startIndex + offset}`}
+                    entry={entry}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        }
+
+        const { entry, index } = block;
+
+        if (entry.type === "foldable") {
+          return (
+            <details
+              key={`foldable-${index}`}
+              className="group rounded-xl border border-[var(--color-border)]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 font-semibold text-[var(--color-foreground)] [&::-webkit-details-marker]:hidden">
+                <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  {entry.title}
+                  {entry.label ? (
+                    <InProgressLabel>{entry.label}</InProgressLabel>
+                  ) : null}
+                </span>
+                <ChevronDown
+                  className="size-4 shrink-0 text-[var(--color-muted-foreground)] transition-transform duration-200 group-open:rotate-180"
+                  aria-hidden
+                />
+              </summary>
+              <div className="border-t border-[var(--color-border)] px-4 py-4">
+                <TutorialContentRenderer entries={entry.entries} />
+              </div>
+            </details>
+          );
+        }
+
         if (entry.type === "heading") {
           const HeadingTag = entry.level === 2 ? "h2" : "h3";
 
@@ -119,18 +232,7 @@ export function TutorialContentRenderer({ entries }: { entries: TutorialEntry[] 
 
         if (entry.type === "image") {
           return (
-            <figure key={`image-${index}`} className="space-y-2">
-              <Image
-                src={entry.src}
-                alt={entry.alt}
-                width={960}
-                height={540}
-                className={cn(
-                  "h-auto rounded-lg border border-[var(--color-border)]",
-                  entry.width === "half" ? "w-1/2 min-w-[12rem]" : "w-full",
-                )}
-              />
-            </figure>
+            <TutorialExpandableImage key={`image-${index}`} entry={entry} />
           );
         }
 

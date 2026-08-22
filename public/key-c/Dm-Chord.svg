@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="900" viewBox="-6 0 632 900" role="img" aria-labelledby="title desc">
+  <title id="title">Dm chord fingering diagram for the key of C</title>
+  <desc id="desc">Six-string guitar chord grid for D minor, with muted low E and A strings, finger 2 on the G string at fret 2, and fixed fingers 1 and 4 on the two highest strings.</desc>
+
+  <g fill="none" stroke="#0b0b0b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 40 H586" stroke-width="38" stroke-linecap="butt"/>
+    <path d="M40 40 V860 M148 40 V860 M256 40 V860 M364 40 V860 M472 40 V860 M580 40 V860" stroke-width="12"/>
+    <path d="M40 313 H580 M40 586 H580 M40 860 H580" stroke-width="12"/>
+  </g>
+
+  <!-- Do not play the low E or A strings -->
+  <path d="M1 2 L79 18 M79 2 L1 18 M109 2 L187 18 M187 2 L109 18" fill="none" stroke="#d01d21" stroke-width="6" stroke-linecap="round"/>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">
+    <!-- Moving fingers -->
+    <circle cx="364" cy="451" r="39" fill="#d01d21"/>
+    <text x="364" y="463" fill="#fff">2</text>
+
+    <!-- Fretboard marker -->
+    <circle cx="310" cy="724" r="39" fill="#abb0bc"/>
+
+    <!-- Fixed fingers -->
+    <circle cx="472" cy="176" r="39" fill="#475366"/>
+    <text x="472" y="188" fill="#fff">1</text>
+    <circle cx="580" cy="724" r="39" fill="#475366"/>
+    <text x="580" y="736" fill="#fff">4</text>
+  </g>
+</svg>

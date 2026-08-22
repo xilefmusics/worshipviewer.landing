@@ -1,10 +1,17 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 import { cn } from "@/lib/utils";
 
-export function InProgressLabel({ className }: { className?: string }) {
+export function InProgressLabel({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: ReactNode;
+}) {
   const { t } = useTranslation();
 
   return (
@@ -14,7 +21,7 @@ export function InProgressLabel({ className }: { className?: string }) {
         className,
       )}
     >
-      {t("tutorials.inProgress")}
+      {children ?? t("tutorials.inProgress")}
     </span>
   );
 }

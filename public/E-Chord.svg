@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="900" viewBox="-6 0 632 900" role="img" aria-labelledby="title desc">
+  <title id="title">E chord fingering diagram</title>
+  <desc id="desc">Standard open E major guitar chord with finger 2 on the G string at fret 1, finger 3 on the A string at fret 2, and finger 4 on the D string at fret 2.</desc>
+
+  <!-- Guitar chord grid -->
+  <g fill="none" stroke="#0b0b0b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 40 H586" stroke-width="38" stroke-linecap="butt"/>
+    <path d="M40 40 V860 M148 40 V860 M256 40 V860 M364 40 V860 M472 40 V860 M580 40 V860" stroke-width="12"/>
+    <path d="M40 313 H580 M40 586 H580 M40 860 H580" stroke-width="12"/>
+  </g>
+
+  <!-- Fingering dots -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">
+    <circle cx="364" cy="176" r="39" fill="#d01d21"/>
+    <text x="364" y="188" fill="#fff">2</text>
+
+    <circle cx="148" cy="451" r="39" fill="#d01d21"/>
+    <text x="148" y="463" fill="#fff">3</text>
+
+    <circle cx="256" cy="451" r="39" fill="#d01d21"/>
+    <text x="256" y="463" fill="#fff">4</text>
+
+    <circle cx="310" cy="724" r="39" fill="#abb0bc"/>
+  </g>
+</svg>

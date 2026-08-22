@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="95 58 1344 245" width="1344" height="245" role="img" aria-labelledby="title desc">
+  <title id="title">Refined movable chord shapes for the key of G</title>
+  <desc id="desc">Full guitar fretboard showing the original G chord, G over B with the ring finger lifted, E minor with finger 1 moved to the A string and low E left open, C with the pinky lifted, and D add 2 with the pinky lifted. The D and G strings remain open.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fff; }
+      .fret { fill: none; stroke: #1f1f1f; stroke-width: 4; }
+      .nut { stroke: #000; stroke-width: 12; }
+      .string { fill: none; stroke: #111; stroke-linecap: round; stroke-width: 4; }
+      .marker { fill: #9ca3af; opacity: .9; }
+      .label { fill: #111; font: 700 18px Arial, Helvetica, sans-serif; text-anchor: middle; }
+      .open-note { fill: #111; font: 700 20px Arial, Helvetica, sans-serif; text-anchor: end; dominant-baseline: middle; }
+      .dot-i { fill: #f97316; }
+      .dot-iv { fill: #e11d48; }
+      .dot-v { fill: #facc15; }
+      .dot-vim { fill: #a855f7; }
+      .shape { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .shape-i { stroke: #c2410c; }
+      .shape-iv { stroke: #9f1239; }
+      .shape-v { stroke: #ca8a04; }
+      .shape-vim { stroke: #6d28d9; }
+      .degree { font: 700 22px Arial, Helvetica, sans-serif; text-anchor: middle; }
+      .degree-i { fill: #c2410c; }
+      .degree-iv { fill: #9f1239; }
+      .degree-v { fill: #ca8a04; }
+      .degree-vim { fill: #6d28d9; }
+      .finger { fill: #fff; font: 700 11px Arial, Helvetica, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .mute { font: 700 18px Arial, Helvetica, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="95" y="58" width="1344" height="245" rx="16"/>
+
+  <text class="degree degree-i" x="355" y="80">1</text>
+  <text class="degree degree-i" x="692" y="80">1/3</text>
+  <text class="degree degree-vim" x="738" y="80">6m</text>
+  <text class="degree degree-iv" x="805" y="80">4</text>
+  <text class="degree degree-v" x="985" y="80">5add2</text>
+
+  <line class="nut" x1="130" y1="95" x2="130" y2="270"/>
+  <path class="fret" d="M220 95V270 M310 95V270 M400 95V270 M490 95V270 M580 95V270 M670 95V270 M760 95V270 M850 95V270 M940 95V270 M1030 95V270 M1120 95V270 M1210 95V270 M1300 95V270 M1390 95V270"/>
+  <path class="string" d="M130 95H1430 M130 130H1430 M130 165H1430 M130 200H1430 M130 235H1430 M130 270H1430"/>
+
+  <circle class="marker" cx="355" cy="182" r="13"/>
+  <circle class="marker" cx="535" cy="182" r="13"/>
+  <circle class="marker" cx="715" cy="182" r="13"/>
+  <circle class="marker" cx="895" cy="182" r="13"/>
+  <circle class="marker" cx="1165" cy="150" r="13"/>
+  <circle class="marker" cx="1165" cy="214" r="13"/>
+
+  <!-- 1: original one-finger G shape -->
+  <line class="shape shape-i" x1="355" y1="95" x2="355" y2="270"/>
+  <circle class="dot-i" cx="355" cy="95" r="12"/><text class="finger" x="355" y="95">4</text>
+  <circle class="dot-i" cx="355" cy="130" r="12"/><text class="finger" x="355" y="130">3</text>
+  <text class="mute degree-i" x="355" y="235">X</text>
+  <circle class="dot-i" cx="355" cy="270" r="12"/><text class="finger" x="355" y="270">2</text>
+
+  <!-- 1/3: lift the ring finger from the B string -->
+  <line class="shape shape-i" x1="692" y1="95" x2="692" y2="270"/>
+  <circle class="dot-i" cx="692" cy="95" r="12"/><text class="finger" x="692" y="95">4</text>
+  <text class="mute degree-i" x="692" y="235">X</text>
+  <circle class="dot-i" cx="692" cy="270" r="12"/><text class="finger" x="692" y="270">2</text>
+
+  <!-- 6m: move finger 1 to the A string and leave the low E open -->
+  <line class="shape shape-vim" x1="738" y1="95" x2="738" y2="235"/>
+  <circle class="dot-vim" cx="738" cy="95" r="12"/><text class="finger" x="738" y="95">4</text>
+  <circle class="dot-vim" cx="738" cy="235" r="12"/><text class="finger" x="738" y="235">1</text>
+
+  <!-- 4: lift the pinky so the high E string supplies the third -->
+  <line class="shape shape-iv" x1="805" y1="130" x2="805" y2="270"/>
+  <circle class="dot-iv" cx="805" cy="130" r="12"/><text class="finger" x="805" y="130">3</text>
+  <text class="mute degree-iv" x="805" y="235">X</text>
+  <circle class="dot-iv" cx="805" cy="270" r="12"/><text class="finger" x="805" y="270">2</text>
+
+  <!-- 5add2: lift the pinky so the open high E adds the 2 -->
+  <line class="shape shape-v" x1="985" y1="130" x2="985" y2="270"/>
+  <circle class="dot-v" cx="985" cy="130" r="12"/><text class="finger" x="985" y="130">3</text>
+  <text class="mute degree-v" x="985" y="235">X</text>
+  <circle class="dot-v" cx="985" cy="270" r="12"/><text class="finger" x="985" y="270">2</text>
+
+  <text class="label" x="130" y="293">0</text>
+  <text class="label" x="175" y="293">1</text><text class="label" x="265" y="293">2</text>
+  <text class="label" x="355" y="293">3</text><text class="label" x="445" y="293">4</text>
+  <text class="label" x="535" y="293">5</text><text class="label" x="625" y="293">6</text>
+  <text class="label" x="715" y="293">7</text><text class="label" x="805" y="293">8</text>
+  <text class="label" x="895" y="293">9</text><text class="label" x="985" y="293">10</text>
+  <text class="label" x="1075" y="293">11</text><text class="label" x="1165" y="293">12</text>
+  <text class="label" x="1255" y="293">13</text><text class="label" x="1345" y="293">14</text>
+
+  <text class="open-note" x="113" y="95">e</text>
+  <text class="open-note" x="113" y="130">B</text>
+  <text class="open-note" x="113" y="165">G</text>
+  <text class="open-note" x="113" y="200">D</text>
+  <text class="open-note" x="113" y="235">A</text>
+  <text class="open-note" x="113" y="270">E</text>
+</svg>
