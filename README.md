@@ -27,9 +27,18 @@ You can deploy the contents of `out/` alongside your main application on any sta
 
 The repository includes a multi-stage `Dockerfile` that builds the static export and serves it with `nginx:alpine`.
 
+CI publishes the image to GitHub Container Registry on pushes to `main` (`:main`) and on git tags (`:<tag>` and `:latest`):
+
+```bash
+docker pull ghcr.io/xilefmusics/worshipviewer-landing:main
+docker run --rm -p 3000:80 ghcr.io/xilefmusics/worshipviewer-landing:main
+```
+
+To build locally instead:
+
 ```bash
 docker build -t worship-viewer-landing .
 docker run --rm -p 3000:80 worship-viewer-landing
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to verify the containerized build. Adjust the image tag/port mapping as needed for deployment.
+Visit [http://localhost:3000](http://localhost:3000) to verify the container. Adjust the image tag/port mapping as needed for deployment.
