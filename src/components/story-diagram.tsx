@@ -43,21 +43,59 @@ export type StoryNode = {
 };
 
 export const storyLayers: StoryNode[][] = [
-  [{ id: "createAccount", icon: LogIn, wide: true, image: "/wv_login.png" }],
+  [
+    {
+      id: "createAccount",
+      icon: LogIn,
+      wide: true,
+      image: "/product/screenshots/account-login.webp",
+    },
+  ],
   [
     { id: "ios", icon: Smartphone, hideScreenshot: true },
     { id: "android", icon: TabletSmartphone, hideScreenshot: true },
     { id: "web", icon: Globe, hideScreenshot: true },
   ],
-  [{ id: "importSong", icon: FilePlus, image: "/wv_edit2.png", wide: true }],
   [
-    { id: "sheets", icon: FileMusic, image: "/wv_sheet.png" },
-    { id: "slides", icon: Presentation, image: "/wv_slide.png" },
+    {
+      id: "importSong",
+      icon: FilePlus,
+      image: "/product/screenshots/song-import.webp",
+      wide: true,
+    },
+  ],
+  [
+    {
+      id: "sheets",
+      icon: FileMusic,
+      image: "/product/screenshots/chord-sheet.webp",
+    },
+    {
+      id: "slides",
+      icon: Presentation,
+      image: "/product/screenshots/presentation-slides.webp",
+    },
     { id: "clicks", icon: AudioLines, comingSoon: true },
-    { id: "pdfs", icon: FileDown, image: "/wv_pdf.png" },
-    { id: "planSets", icon: ListMusic, image: "/wv_edit.png" },
-    { id: "shareTeam", icon: Users, image: "/wv_team.png" },
-    { id: "liveSessions", icon: Radio, image: "/wv_session.png" },
+    {
+      id: "pdfs",
+      icon: FileDown,
+      image: "/product/screenshots/pdf-export.webp",
+    },
+    {
+      id: "planSets",
+      icon: ListMusic,
+      image: "/product/screenshots/setlist-planning.webp",
+    },
+    {
+      id: "shareTeam",
+      icon: Users,
+      image: "/product/screenshots/team-sharing.webp",
+    },
+    {
+      id: "liveSessions",
+      icon: Radio,
+      image: "/product/screenshots/live-session.webp",
+    },
     { id: "digitalMd", icon: Sparkles, comingSoon: true },
   ],
 ];

@@ -48,7 +48,7 @@ export default function Home() {
           />
           <div className="relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-2 shadow-[var(--shadow-elevated)] sm:p-3">
             <Image
-              src="/wv_sheet.png"
+              src="/product/screenshots/chord-sheet.webp"
               alt={t("hero.productImageAlt")}
               width={1024}
               height={1024}

@@ -1,9 +1,0 @@
-<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="800" rx="40" fill="oklch(0.23 0 264)" />
-  <text x="600" y="380" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="80" fill="oklch(0.96 0 264)" font-weight="600" text-anchor="middle">
-    More to come
-  </text>
-  <text x="600" y="460" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="28" fill="oklch(0.76 0 264)" text-anchor="middle" letter-spacing="6">
-    WORSHIP VIEWER
-  </text>
-</svg>

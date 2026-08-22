@@ -34,7 +34,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-5">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-4">
           <Image
-            src="/favicon.png"
+            src="/brand/favicon.png"
             alt=""
             width={112}
             height={112}
@@ -43,7 +43,7 @@ export function SiteHeader() {
           />
           <span className="min-w-0">
             <Image
-              src="/brand/logo-text.png"
+              src="/brand/wordmark.png"
               alt="Worship Viewer"
               width={900}
               height={400}

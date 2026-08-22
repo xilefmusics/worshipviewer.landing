@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Helps you lead worship - then steps aside when the Spirit takes over.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/brand/favicon.png",
   },
 };
 
